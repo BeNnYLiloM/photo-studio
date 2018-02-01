@@ -1,0 +1,11 @@
+block variables
+
+mixin icon(name,mod)
+    - mod = mod || ''
+    svg(class="icon icon-" + name + ' ' + mod)
+        use(xlink:href="/static/img/svg/symbol/sprite.svg#" + name)
+
+
+mixin fa(name)
+    i(class="fa fa-" + name, aria-hidden="true")
+

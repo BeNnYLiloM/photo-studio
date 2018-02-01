@@ -1,0 +1,656 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Фотосессии'
+    - var activeLink = 'Виды фотосессий'
+    - var modPage = 'photo-session'
+    -
+        var nav = [
+            {
+                'title': 'Виды фотосессий',
+                'link': 'photosession.html'
+            },
+            {
+                'title': 'Интерьеры',
+                'link': 'interer.html'
+            },
+            {
+                'title': 'Гардероб',
+                'link': 'garderob.html'
+            },
+            {
+                'title': 'Подарочный сертификат',
+                'link': 'certificates.html'
+            },
+            {
+                'title': 'Отзывы',
+                'link': 'reviews.html'
+            },
+            {
+                'title': 'Блог',
+                'link': 'blog.html'
+            },
+            {
+                'title': 'Контакты',
+                'link': 'contacts.html'
+            }
+        ]
+
+block content
+    // Begin photo-session
+    .photo-session
+        .photo-session__banner
+            .container
+                .photo-session__banner__title Фотосессия для беременных от 6500р
+                .photo-session__banner__text В стоимость входит:
+                .photo-session__banner__wrap
+                    .photo-session__banner__item
+                        +icon('cert-1')
+                        | Аренда фотостудии
+
+                    .photo-session__banner__item
+                        +icon('cert-2')
+                        | Одежда
+
+                    .photo-session__banner__item
+                        +icon('cert-3')
+                        | Макияж
+
+                    .photo-session__banner__item
+                        +icon('cert-4')
+                        | Укладка
+
+                    .photo-session__banner__item
+                        +icon('cert-8')
+                        | Обработка фото
+
+                .photo-session__banner__links
+                    button.default-btn.order-photo-session-btn Забронировать фотосессию
+                    .calc-pay
+                        +icon('calc')
+                        span Рассчитать стоимость
+
+                .photo-session__banner__mouse
+                    .arrow
+
+        .photo-session__menu
+            .container
+                .navbar
+                    - activeLink = activeLink || ''
+                    each navItem in nav
+                        if navItem.title == activeLink
+                            a(href= navItem.link class='navbar__nav__item' + ' active')= navItem.title
+                        else
+                            a(href= navItem.link class='navbar__nav__item')= navItem.title
+
+        .photo-session__tabs.tabs
+            .container
+                .photo-session__tabs__toggles.tabs__toggles
+                    .photo-session__tabs__toggles-item.tabs__toggles__item._active(data-toggle='1') Для беременных
+                    .photo-session__tabs__toggles-item.tabs__toggles__item(data-toggle='2') Семейная
+                    .photo-session__tabs__toggles-item.tabs__toggles__item(data-toggle='3') Свадебная
+                    .photo-session__tabs__toggles-item.tabs__toggles__item(data-toggle='4') Детская
+                    .photo-session__tabs__toggles-item.tabs__toggles__item(data-toggle='5') Для девушки
+                    .photo-session__tabs__toggles-item.tabs__toggles__item(data-toggle='6') Для мужчины
+                    .photo-session__tabs__toggles-item.tabs__toggles__item(data-toggle='7') Лав стори
+                    .photo-session__tabs__toggles-item.tabs__toggles__item(data-toggle='8') На день рождения
+
+                .photo-session__tabs__wrap.tabs__wrap
+                    .photo-session__tabs__item.tabs__item._active(data-tab='1')
+                        a(href='static/img/content/tab-img-1.jpg')
+                            img(src='static/img/content/tab-img-1.jpg')
+                            .hover-block
+                                .dashed-block
+                                .inner-block
+                                    +icon('cert-1')
+
+                        a(href='static/img/content/tab-img-1.jpg')
+                            img(src='static/img/content/tab-img-1.jpg')
+                            .hover-block
+                                .dashed-block
+                                .inner-block
+                                    +icon('cert-1')
+
+                        a(href='static/img/content/tab-img-1.jpg')
+                            img(src='static/img/content/tab-img-1.jpg')
+                            .hover-block
+                                .dashed-block
+                                .inner-block
+                                    +icon('cert-1')
+
+                        a(href='static/img/content/tab-img-2.jpg')
+                            img(src='static/img/content/tab-img-2.jpg')
+                            .hover-block
+                                .dashed-block
+                                .inner-block
+                                    +icon('cert-1')
+
+                        a(href='static/img/content/tab-img-2.jpg')
+                            img(src='static/img/content/tab-img-2.jpg')
+                            .hover-block
+                                .dashed-block
+                                .inner-block
+                                    +icon('cert-1')
+
+                        a(href='static/img/content/tab-img-1.jpg')
+                            img(src='static/img/content/tab-img-1.jpg')
+                            .hover-block
+                                .dashed-block
+                                .inner-block
+                                    +icon('cert-1')
+
+                        a(href='static/img/content/tab-img-1.jpg')
+                            img(src='static/img/content/tab-img-1.jpg')
+                            .hover-block
+                                .dashed-block
+                                .inner-block
+                                    +icon('cert-1')
+
+                        a(href='static/img/content/tab-img-1.jpg')
+                            img(src='static/img/content/tab-img-1.jpg')
+                            .hover-block
+                                .dashed-block
+                                .inner-block
+                                    +icon('cert-1')
+
+                        .load-more
+                            | Смотреть еще 
+                            +fa('eye')
+
+        .photo-session__calc
+            .container
+                .photo-session__calc__block
+                    .photo-session__calc__title Калькулятор стоимости
+                    .photo-session__calc__sub-title В фотосессии принимают участие до 5 человек
+                    .photo-session__calc__wrap
+                        .photo-session__calc__left
+                            .photo-session__calc__slide
+                                .photo-session__calc__label Количество интерьеров:
+                                .photo-session__calc__slide-wrap
+                                    input.photo-session__calc__slide-input(type='text' value='1')
+                                    .photo-session__calc__slide-numbers
+                                        span._active 1
+                                        span 2
+                                        span 3
+                                        span 4
+                                        span 5
+
+                                    .photo-session__calc__slide-js
+                                    .photo-session__calc__slide-help
+                                        +fa('question-circle')
+                                        .photo-session__calc__slide-hint Нажмите на «Выбрать интерьеры» и отметьте галочкой интерьеры в которых вы хотели сниматься, после чего нажмите кнопку выбрать.
+
+                            .photo-session__calc__slide
+                                .photo-session__calc__label Количество образов:
+                                .photo-session__calc__slide-wrap
+                                    input.photo-session__calc__slide-input(type='text' value='1')
+                                    .photo-session__calc__slide-numbers
+                                        span._active 1
+                                        span 2
+                                        span 3
+                                        span 4
+                                        span 5
+
+                                    .photo-session__calc__slide-js
+                                    .photo-session__calc__slide-help
+                                        +fa('question-circle')
+                                        .photo-session__calc__slide-hint Нажмите на «Выбрать интерьеры» и отметьте галочкой интерьеры в которых вы хотели сниматься, после чего нажмите кнопку выбрать.
+
+                            .photo-session__calc__tabs.tabs
+                                .photo-session__calc__tabs-toggles.tabs__toggles
+                                    .photo-session__calc__tabs-toggles-item.tab__toggles__item._active(data-toggle='1') Для себя
+                                    .photo-session__calc__tabs-toggles-item.tab__toggles__item(data-toggle='2') В подарок
+
+                                .photo-session__calc__tabs-wrap.tabs__wrap
+                                    .photo-session__calc__tabs-item.tabs__item._active(data-tab='1')
+                                        .photo-session__calc__tabs-line
+                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Аренда фотостудии
+                                            .photo-session__calc__tabs-line-item Входит в стоимость
+                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
+                                        .photo-session__calc__tabs-line
+                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Макияж
+                                            .photo-session__calc__tabs-line-item Входит в стоимость
+                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
+                                        .photo-session__calc__tabs-line
+                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Укладка
+                                            .photo-session__calc__tabs-line-item Входит в стоимость
+                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
+                                        .photo-session__calc__tabs-line
+                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Одежда
+                                            .photo-session__calc__tabs-line-item Входит в стоимость
+                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
+                                        .photo-session__calc__tabs-line
+                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Обувь
+                                            .photo-session__calc__tabs-line-item Входит в стоимость
+                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
+                                        .photo-session__calc__tabs-line
+                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Аксессуары
+                                            .photo-session__calc__tabs-line-item Входит в стоимость
+                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
+
+                                    .photo-session__calc__tabs-item.tabs__item(data-tab='1')
+                                        .photo-session__calc__tabs-line
+                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Одежда
+                                            .photo-session__calc__tabs-line-item Входит в стоимость
+                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
+                                        .photo-session__calc__tabs-line
+                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Обувь
+                                            .photo-session__calc__tabs-line-item Входит в стоимость
+                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
+                                        .photo-session__calc__tabs-line
+                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Аксессуары
+                                            .photo-session__calc__tabs-line-item Входит в стоимость
+                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
+                                        .photo-session__calc__tabs-line
+                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Аренда фотостудии
+                                            .photo-session__calc__tabs-line-item Входит в стоимость
+                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
+                                        .photo-session__calc__tabs-line
+                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Макияж
+                                            .photo-session__calc__tabs-line-item Входит в стоимость
+                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
+                                        .photo-session__calc__tabs-line
+                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Укладка
+                                            .photo-session__calc__tabs-line-item Входит в стоимость
+                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
+
+                        .photo-session__calc__right
+                            .photo-session__calc__text
+                                .photo-session__calc__text-item
+                                    +fa('arrow-right')
+                                    | Наш стилист подберет вам наряды и сделает укладку для 1 образа руководствуясь вашими пожеланиями
+                                .photo-session__calc__text-item
+                                    +fa('arrow-right')
+                                    | Профессиональный визажист сделает вам макияж в соответсвии со стилей вашей фотосессии
+                                .photo-session__calc__text-item
+                                    +fa('arrow-right')
+                                    | Фотосессия будет проходить на 1 интерьере. Весь реквизит уже включен в стоимость
+                                .photo-session__calc__text-item
+                                    +fa('arrow-right')
+                                    | На площадке с вами будет работать профессиональный фотограф, подсказывая вам наиболее удачные позы и ракурсы
+                                
+                            .photo-session__calc__info
+                                | В течении 2 дней с момента съемки вы получите обработанные снимки на почту, загруженные на файлообменник
+
+                            .photo-session__calc__summ
+                                .photo-session__calc__summ-text Стоимость вашей фотосесии составляет:
+                                .photo-session__calc__summ-input
+                                    span 6500
+                                    | р
+
+                            button.default-btn.photo-session__calc__btn
+                                a.popup-with-form(href='#booking-form') Выбрать дату и время
+
+        .photo-session__select-package
+            .container
+                .photo-session__select-package__title Вы можете выбрать один из пакетов
+                .photo-session__select-package__wrap
+                    .photo-session__select-package__item
+                        .photo-session__select-package__item-title минимальный
+                        .photo-session__select-package__item-wrap
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Аренда фотостудии
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | 1 образ
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | 1 интерьер
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Макияж
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Укладка
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Одежда
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Обработка всей фотосессии (от 50 до 100 снимков с 1 интерьера)
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Участвует до 5 человек
+
+                        .photo-session__select-package__item-price 6500р
+                        button.default-btn.photo-session__select-package__item-btn
+                            a.popup-with-form(href='#callback-form') Забронировать
+
+                    .photo-session__select-package__item
+                        .photo-session__select-package__item-title Стандарт
+                        .photo-session__select-package__item-wrap
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Аренда фотостудии
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | 2 образа
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | 2 интерьера
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Макияж
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Укладка
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Одежда
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Обработка всей фотосессии (от 50 до 100 снимков с 1 интерьера)
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Участвует до 5 человек
+
+                        .photo-session__select-package__item-price 8500р
+                        button.default-btn.photo-session__select-package__item-btn
+                            a.popup-with-form(href='#callback-form') Забронировать
+
+                    .photo-session__select-package__item
+                        .photo-session__select-package__item-title Премиум
+                        .photo-session__select-package__item-wrap
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Аренда фотостудии
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | 3 образа
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | 3 интерьера
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Макияж
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Укладка
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Одежда
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Обработка всей фотосессии (от 50 до 100 снимков с 1 интерьера)
+                            .photo-session__select-package__item-line
+                                +fa('arrow-right')
+                                | Участвует до 5 человек
+
+                        .photo-session__select-package__item-price 10500р
+                        button.default-btn.photo-session__select-package__item-btn
+                            a.popup-with-form(href='#callback-form') Забронировать
+
+        .photo-session__interiors
+            .container
+                .photo-session__interiors__title интерьеры фотостудии
+                .interiors__info
+                    .interiors__info__left-side
+                        h2 8 интерьеров в одном большом зале
+                        p В нашей просторной, светлой фотостудии расположились 8 интерьеров для фотосессии. Это очень удобно т.к. у нас вы можете провести несколько абсолютно разных по стилистике съемок, не выходя из зала.
+
+                    .interiors__info__right-side
+                        .interiors__numbers
+                            .interiors__numbers__item
+                                .border-block
+                                    .inner-block 1
+                            .interiors__numbers__item
+                                .border-block
+                                    .inner-block 2
+                            .interiors__numbers__item
+                                .border-block
+                                    .inner-block 3
+                            .interiors__numbers__item
+                                .border-block
+                                    .inner-block 4
+                            .interiors__numbers__item
+                                .border-block
+                                    .inner-block 5
+                            .interiors__numbers__item
+                                .border-block
+                                    .inner-block 6
+                            .interiors__numbers__item
+                                .border-block
+                                    .inner-block 7
+                            .interiors__numbers__item
+                                .border-block
+                                    .inner-block 8
+
+            .example-works
+                .example-works__item
+                    .example-works__slider.magnific-image
+                        a.example-works__slider__item(href='static/img/content/example-work-img.jpg')
+                            img(src='static/img/content/example-work-img.jpg', alt='')
+                        a.example-works__slider__item(href='static/img/content/example-work-img.jpg')
+                            img(src='static/img/content/example-work-img.jpg', alt='')
+                        a.example-works__slider__item(href='static/img/content/example-work-img.jpg')
+                            img(src='static/img/content/example-work-img.jpg', alt='')
+                        a.example-works__slider__item(href='static/img/content/example-work-img.jpg')
+                            img(src='static/img/content/example-work-img.jpg', alt='')
+                        a.example-works__slider__item(href='static/img/content/example-work-img.jpg')
+                            img(src='static/img/content/example-work-img.jpg', alt='')
+                        a.example-works__slider__item(href='static/img/content/example-work-img.jpg')
+                            img(src='static/img/content/example-work-img.jpg', alt='')
+
+
+            .photo-session__views
+                .container
+                    .photo-session__views__title Виды фотосессий для беременных
+                    .photo-session__views__wrap
+                        .photo-session__views__img
+                            img(src='static/img/content/views-img-1.png' alt='')
+
+                        .photo-session__views__text-block
+                            .photo-session__views__sub-title Фотосессия беременных с мужем
+                            .photo-session__views__text
+                                p Разнообразный и богатый опыт консультация с широким активом играет важную роль в формировании систем массового участия. Таким образом реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач.
+                                p Товарищи! начало повседневной работы по формированию позиции играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. 
+
+                    .photo-session__views__wrap
+                        .photo-session__views__text-block
+                            .photo-session__views__sub-title Фотосессия беременных в студии
+                            .photo-session__views__text
+                                p Повседневная практика показывает, что консультация с широким активом требуют от нас анализа дальнейших направлений развития. Равным образом постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки форм развития.
+                                p Разнообразный и богатый опыт рамки и место обучения кадров представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. 
+
+                        .photo-session__views__img
+                            img(src='static/img/content/views-img-2.png' alt='')
+
+        .photo-session__steps
+            .container
+                .photo-session__steps__title Этапы фотосессии
+                .photo-session__steps__wrap
+                    .photo-session__steps__item
+                        .photo-session__steps__number 1
+                        .photo-session__steps__icon
+                            +icon('phone-plus')
+
+                        .photo-session__steps__text-block
+                            .photo-session__steps__sub-title заявка
+                            .photo-session__steps__text Оставить нам заявку или позвонить
+
+                    .photo-session__steps__item
+                        .photo-session__steps__number 2
+                        .photo-session__steps__icon
+                            +icon('step-1')
+
+                        .photo-session__steps__text-block
+                            .photo-session__steps__sub-title Бронь фотосессии
+                            .photo-session__steps__text В течении 20 минут с Вами свяжется администратор для бронирования фотосесии и уточенения деталей
+
+                    .photo-session__steps__item
+                        .photo-session__steps__number 3
+                        .photo-session__steps__icon
+                            +icon('step-2')
+
+                        .photo-session__steps__text-block
+                            .photo-session__steps__sub-title Предоплата
+                            .photo-session__steps__text Вносите предоплату за фотосессию в размере 3000 руб.
+
+                    .photo-session__steps__item
+                        .photo-session__steps__number 4
+                        .photo-session__steps__icon
+                            +icon('step-3')
+
+                        .photo-session__steps__text-block
+                            .photo-session__steps__sub-title Приезжаете к нам
+                            .photo-session__steps__text Приезжаете в назначенное время на фотосессию
+
+
+                    .photo-session__steps__item
+                        .photo-session__steps__number 5
+                        .photo-session__steps__icon
+                            +icon('step-4')
+
+                        .photo-session__steps__text-block
+                            .photo-session__steps__sub-title Профессиональный визажист
+                            .photo-session__steps__text Профессиональный визажист делает макияж и укладку
+
+                    .photo-session__steps__item
+                        .photo-session__steps__number 6
+                        .photo-session__steps__icon
+                            +icon('cert-2')
+
+                        .photo-session__steps__text-block
+                            .photo-session__steps__sub-title Подборка нарядов
+                            .photo-session__steps__text Стилист подбирает наряды для выбранных вами образов
+
+                    .photo-session__steps__item
+                        .photo-session__steps__number 7
+                        .photo-session__steps__icon
+                            +icon('cert-5')
+
+                        .photo-session__steps__text-block
+                            .photo-session__steps__sub-title Фотосессия
+                            .photo-session__steps__text Профессиональный фотограф проводит фотосессию на  выбранных Вами локациях, помогая Вам с выбором наиболее удачных поз и ракурсов
+
+                    .photo-session__steps__item
+                        .photo-session__steps__number 8
+                        .photo-session__steps__icon
+                            +icon('step-5')
+
+                        .photo-session__steps__text-block
+                            .photo-session__steps__sub-title Оплата
+                            .photo-session__steps__text Оплачиваете оставшуюся сумму
+
+                    .photo-session__steps__item
+                        .photo-session__steps__number 9
+                        .photo-session__steps__icon
+                            +icon('step-6')
+
+                        .photo-session__steps__text-block
+                            .photo-session__steps__sub-title Получаете фотографии
+                            .photo-session__steps__text В течении 2 дней получаете обработанную фотосессию на указанную электронную почту
+
+        .photo-session__booking
+            .container
+                .photo-session__booking__wrap
+                    .photo-session__booking__left
+                        .photo-session__booking__title успейте забронировать
+                        .photo-session__booking__sub-title Успей забронировать время на фотосессию!
+                        .photo-session__booking__inputs
+                            .photo-session__booking__input-item
+                                input.photo-session__booking__input(type='text')
+                                .photo-session__booking__ico
+                                    +fa('calendar')
+
+                            .photo-session__booking__input-item
+                                input.photo-session__booking__input(type='text')
+                                .photo-session__booking__ico
+                                    +fa('clock-o')
+
+                        .photo-session__booking__text
+                            p
+                                b Благодаря тому что мы смогли предоставить самые лучшие условия для проведения фотосессии, многие даты уже почти полностью забронировать на весь день.
+                            p
+                                b Чтобы не упустить удобное для себя время, забронируй время под свою фотосессию прямо сейчас и уже никто занять
+
+                        button.default-btn.photo-session__booking__btn
+                            a.popup-with-form(href='#prepayment-form') Забронировать
+
+                    .photo-session__booking__right
+                        img(src="static/img/content/booking-img.jpg" alr='')
+
+    // End photo-session
+
+    form(id="booking-form" class="mfp-hide white-popup-block popup")
+        .popup__close
+            +fa('times')
+
+        .popup__title ФОТОСТУДИЯ №1
+        .popup__form-body
+            .popup__input-item
+                .popup__label-text Желаемая дата:
+                .popup__input-wrap
+                    input.popup__input(type='text')
+                    .popup__icon
+                        +fa('calendar')
+
+            .popup__input-item
+                .popup__label-text Желаемое время:
+                .popup__input-wrap
+                    input.popup__input(type='text')
+                    .popup__icon
+                        +fa('clock-o')
+
+            .popup__input-item
+                .popup__label-text Ваше имя:
+                input.popup__input(type='text')
+
+            .popup__input-item
+                .popup__label-text Телефон:
+                input.popup__input(type='text')
+
+            .popup__input-item
+                .popup__label-text E-mail:
+                input.popup__input(type='text')
+
+            .popup__input-item
+                button.default-btn.popup__submit(type='submit') Отправить
+
+    form(id="callback-form" class="mfp-hide white-popup-block popup")
+        .popup__close
+            +fa('times')
+
+        .popup__title ФОТОСТУДИЯ №1
+        .popup__form-body
+            .popup__input-item
+                .popup__label-text Ваше имя:
+                input.popup__input(type='text')
+
+            .popup__input-item
+                .popup__label-text Телефон:
+                input.popup__input(type='text')
+
+            .popup__input-item
+                .popup__label-text E-mail:
+                input.popup__input(type='text')
+
+            .popup__input-item
+                button.default-btn.popup__submit(type='submit') Отправить
+
+    form(id="prepayment-form" class="mfp-hide white-popup-block popup")
+        .popup__close
+            +fa('times')
+
+        .popup__title внести предоплату
+        .popup__form-body
+            .popup__input-item
+                .popup__label-text Сумма оплаты:
+                input.popup__input(type='text')
+
+            .popup__input-item
+                .popup__label-text Ваше имя:
+                input.popup__input(type='text')
+
+            .popup__input-item
+                .popup__label-text Телефон:
+                input.popup__input(type='text')
+
+            .popup__input-item
+                .popup__label-text E-mail:
+                input.popup__input(type='text')
+
+            .popup__input-item
+                button.default-btn.popup__submit(type='submit') Оплатить
+    

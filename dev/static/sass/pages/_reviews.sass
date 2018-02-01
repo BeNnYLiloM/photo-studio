@@ -1,0 +1,50 @@
+.reviews
+    &__text
+        font-weight: 500
+        font-size: 18px
+        line-height: 40px
+        margin-top: 52px
+
+        p
+            line-height: 40px
+            letter-spacing: 1.05px
+
+    &__links
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-top: 67px
+        margin-bottom: 64px
+
+        &__item
+            width: 15.2542%
+            height: 180px
+            display: flex
+            justify-content: center
+            align-items: center
+            background: #fff
+            border-radius: 8px
+            transition: .15s ease-out
+            padding: 0 10px
+
+            &:hover
+                box-shadow: 0 16px 59px rgba(142,91,208,.22)
+
+                img
+                    filter: grayscale(0)
+                    opacity: 1
+
+            img
+                filter: grayscale(100%)
+                opacity: .6
+                transition: .15s ease-out
+
+
+@media screen and (max-width: 992px)
+    .reviews
+        &__links
+            flex-wrap: wrap
+
+            &__item
+                width: 30%
+                margin-bottom: 25px

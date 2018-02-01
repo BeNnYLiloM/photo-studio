@@ -1,0 +1,86 @@
+.wardrobe
+    &__text
+        font-size: 18px
+        line-height: 40px
+        margin: 52px 0 67px
+        letter-spacing: 1.1px
+
+        p
+            font-weight: 500
+            line-height: 40px
+            letter-spacing: 1.1px
+            
+
+.category-filter
+    max-width: 380px
+    position: relative
+    border-radius: 4px
+    border: 2px solid $cPurple
+    margin-bottom: 80px
+
+    &._active
+        .category-filter__dropdown
+            opacity: 1
+            visibility: visible
+            transform: translateY(0)
+            box-shadow: 0 16px 59px rgba(142,91,208,.22)
+
+    &__selected
+        font-weight: 500
+        height: 52px
+        line-height: 48px
+        padding: 0 24px
+        cursor: pointer
+
+        .fa
+            position: absolute
+            top: 19px
+            right: 17px
+            font-size: 13px
+
+    &__dropdown
+        position: absolute
+        top: calc(100% + 8px)
+        background: #fff
+        border-radius: 3px
+        left: -2px
+        width: calc(100% + 4px)
+        font-weight: 500
+        z-index: 10
+        opacity: 0
+        visibility: hidden
+        transition: .15s ease-out
+        transform: translateY(15px)
+
+        .mixitup-control-active
+            color: $cPurple
+
+    &__item
+        border-bottom: 2px solid #f5effd
+        height: 56px
+        line-height: 54px
+        cursor: pointer
+        transition: .15s ease-out
+        padding: 0 26px
+
+        &:last-child
+            border-bottom: none
+
+        &:hover
+            color: $cPurple
+
+
+.mix-container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: 30px
+
+    .mix
+        max-width: 380px
+        width: 100%
+        margin-bottom: 20px
+
+        img
+            display: block
+            border-radius: 8px

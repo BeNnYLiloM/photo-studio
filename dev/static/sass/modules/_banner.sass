@@ -1,0 +1,29 @@
+.banner
+    background: url('../img/backgrounds/banner-bg.jpg') no-repeat center top
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 895px
+    padding-top: 78px
+    margin-bottom: 58px
+
+    &__text
+        background: #000
+        font-family: $crz
+        font-size: 80px
+        text-transform: uppercase
+        color: #fff
+        line-height: 144px
+        height: 144px
+        letter-spacing: 5px
+        padding: 3px 36px 0
+
+    
+@media screen and (max-width: 680px)
+    .banner
+        &__text
+            font-size: 60px
+            padding-left: 18px
+            padding-right: 18px
+            line-height: 86px
+            height: 89px

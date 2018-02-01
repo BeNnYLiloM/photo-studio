@@ -1,0 +1,108 @@
+.pagination
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 72px
+
+    &__btn
+        &:hover
+            .pagination__btn__link
+                color: $cPurple
+
+            .square
+                background: transparent
+                border-color: $cPurpleDark
+
+        &__link
+            display: flex
+            align-items: center
+            text-decoration: none
+            color: $cPurpleDark
+            font-weight: 500
+            letter-spacing: .6px
+            transition: .2s ease-out
+
+        &--prev
+            .square
+                margin-left: 23px
+
+        &--next
+            .square
+                margin-right: 23px
+
+        .square
+            border: 2px solid rgba(161,100,240,.2)
+            background: rgba(161,100,240,.2)
+            width: 55px
+            height: 55px
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 4px
+            background-origin: content-box
+            background-clip: padding-box
+            transition: border .2s ease-out, background .2s ease-out
+
+    &__wrap
+        border-bottom: 2px solid rgba(161,100,240,.2)
+        display: flex
+        margin: 0 40px
+
+    &__item
+        text-decoration: none
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 55px
+        width: 27px
+        position: relative
+        margin: 0 15px
+        font-weight: 500
+        font-size: 18px
+        color: $cPurpleDark
+        transition: .2s ease-out
+
+        &:first-of-type
+            margin-left: 0
+
+        &:last-of-type
+            margin-right: 0
+
+        &:hover
+            color: $cPurple
+
+            &::before
+                opacity: 1
+
+        &.active
+            color: $cPurple
+
+            &::before
+                opacity: 1
+
+        &::before
+            content: ""
+            background: $cPurple
+            width: 100%
+            height: 4px
+            position: absolute
+            bottom: -3px
+            left: 0
+            opacity: 0
+            border-radius: 0 0 3px 3px
+            transition: .2s ease-out
+
+
+@media screen and (max-width: 780px)
+    .pagination
+        &__wrap
+            margin: 0 20px
+
+        &__btn
+            &--prev
+                .square
+                    margin-left: 10px
+
+            &--next
+                .square
+                    margin-right: 10px

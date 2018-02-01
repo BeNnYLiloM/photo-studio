@@ -1,0 +1,43 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Отзывы'
+    - var activeLink = 'Отзывы'
+
+block content
+    // Begin breadcrumbs
+    .container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href='index.html') Главная
+
+            .breadcrumbs__item.breadcrumbs__item--current Фотостудия №1 - отзывы
+    // End breadcrumbs
+
+    // Begin reviews
+    .reviews
+        .container
+            h1 Фотостудия №1 - отзывы
+
+            .reviews__text
+                p Мы не стали собирать картинки хороших отзывов на нашем сайте, т.к. это не является достоверным. Мы просто нашли открытые источники в которых о нас пишут в сети.
+
+            .reviews__links
+                a.reviews__links__item(href='#', target='_blank')
+                    img(src="static/img/content/reviews-img.png", alt="")
+                a.reviews__links__item(href='#', target='_blank')
+                    img(src="static/img/content/reviews-img.png", alt="")
+                a.reviews__links__item(href='#', target='_blank')
+                    img(src="static/img/content/reviews-img.png", alt="")
+                a.reviews__links__item(href='#', target='_blank')
+                    img(src="static/img/content/reviews-img.png", alt="")
+                a.reviews__links__item(href='#', target='_blank')
+                    img(src="static/img/content/reviews-img.png", alt="")
+                a.reviews__links__item(href='#', target='_blank')
+                    img(src="static/img/content/reviews-img.png", alt="")
+
+            .reviews__text
+                p Спасибо, что оставляете отзывы о нашей работе! Мы всегда рады услышать ваше мнение, это помогает нам становиться лучше.
+
+
+    // End reviews

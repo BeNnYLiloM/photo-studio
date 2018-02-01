@@ -1,0 +1,21 @@
+.pagination
+    .pagination__btn.pagination__btn--prev
+        a(href='#').pagination__btn__link
+            span Влево
+            .square
+                +fa('chevron-left')
+
+    .pagination__wrap
+        a.pagination__item.active(href='#') 1
+        a.pagination__item(href='#') 2
+        a.pagination__item(href='#') 3
+        a.pagination__item(href='#') 4
+        a.pagination__item(href='#') 5
+        a.pagination__item(href='#') 6
+
+    .pagination__btn.pagination__btn--next
+        a(href='#').pagination__btn__link
+            .square
+                +fa('chevron-right')
+
+            span Вправо

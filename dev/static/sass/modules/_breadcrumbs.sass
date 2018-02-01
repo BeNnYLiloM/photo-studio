@@ -1,0 +1,62 @@
+.breadcrumbs
+    display: flex
+
+    &__item
+        position: relative
+        height: 34px
+        line-height: 28px
+        font-size: 13px
+        font-weight: 500
+        letter-spacing: 0.9px
+        margin-right: 11px
+        color: $cPurpleDark
+
+        & + .breadcrumbs__item a
+            border-left: none
+
+            &::before
+                content: ""
+                background: url('../img/icons/breadcrumbs-label2.png') no-repeat
+                position: absolute
+                top: -2px
+                left: -10px
+                width: 12px
+                height: 34px
+
+        &--current
+            background: rgba(161,100,240,.1)
+            line-height: 32px
+            border-radius: 0 4px 4px 0
+            padding: 0 19px 0 11px
+
+            &::before
+                content: ""
+                border-right: 10px solid rgba(161,100,240,.1)
+                border-top: 17px solid transparent
+                border-bottom: 17px solid transparent
+                position: absolute
+                top: 0
+                left: -10px
+
+        &:first-child
+            a
+                border-radius: 4px 0 0 4px
+
+        a
+            display: block
+            text-decoration: none
+            height: 100%
+            color: $cPurple
+            padding: 0 28px 0 18px
+            position: relative
+            border: 2px solid $cPurple
+            border-right: none
+
+            &::after
+                content: ""
+                background: url("../img/icons/breadcrumbs-label.png") no-repeat
+                width: 11px
+                height: 34px
+                position: absolute
+                top: -2px
+                right: -2px

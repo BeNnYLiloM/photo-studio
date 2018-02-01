@@ -1,0 +1,1073 @@
+.photo-session
+    &__banner
+        background: url('../img/backgrounds/banner-bg2.jpg') no-repeat center top
+        text-align: center
+        padding-top: 254px
+        padding-bottom: 60px
+        margin-bottom: 37px
+
+        &__title
+            font-family: $crz
+            font-size: 50px
+            text-transform: uppercase
+            letter-spacing: 3px
+            margin-bottom: 2px
+            transform: translateY(-20px)
+            opacity: 0
+            transition: .3s ease-out
+
+        &__text
+            font-weight: 500
+            font-size: 25px
+            letter-spacing: 1.4px
+            margin-bottom: 28px
+
+        &__wrap
+            display: flex
+            background: rgba(255,255,255,.9)
+            border-radius: 8px
+            margin-bottom: 75px
+
+        &__item
+            display: flex
+            align-items: center
+            justify-content: center
+            font-weight: 500
+            font-size: 18px
+            position: relative
+            height: 76px
+            letter-spacing: 1.2px
+            padding: 0 30px 4px
+
+            &:nth-child(1)
+                .icon
+                    font-size: 35px
+
+            &:nth-child(2)
+                .icon
+                    font-size: 37px
+
+            &:nth-child(3)
+                .icon
+                    font-size: 37px
+
+            &:nth-child(4)
+                .icon
+                    font-size: 37px
+
+            &:nth-child(5)
+                &::before
+                    display: none
+
+                .icon
+                    font-size: 35px
+
+            &::before
+                content: ''
+                border-right: 1px solid rgba(212,89,199,.2)
+                height: 100%
+                position: absolute
+                top: 0
+                right: 0
+
+            .icon
+                color: $cPurple
+                margin-right: 27px
+                width: 38px
+
+        &__links
+            display: flex
+            justify-content: center
+            align-items: center
+            padding-right: 115px
+            margin-bottom: 135px
+
+        .order-photo-session-btn
+            height: 65px
+            width: 380px
+            margin-right: 40px
+            letter-spacing: .6px
+
+        .calc-pay
+            cursor: pointer
+            color: $cPurple
+            font-weight: 500
+            font-size: 18px
+            display: flex
+            align-items: center
+            height: 31px
+            letter-spacing: 1px
+
+            .icon
+                font-size: 25px
+                margin-right: 20px
+
+            span
+                color: $cPurpleDark
+                text-decoration: underline
+
+        &__mouse
+            background: url('../img/icons/mouse.png') no-repeat
+            width: 87px
+            height: 73px
+            margin: 0 auto
+            position: relative
+
+            .arrow
+                position: absolute
+                top: 7px
+                left: 37px
+                background: url('../img/icons/arrow-down.png') no-repeat
+                width: 14px
+                height: 18px
+                animation: scrollDown 3s linear infinite
+    
+    &__menu
+        margin-bottom: 42px
+
+        .navbar
+            display: flex
+            position: relative
+
+            &::after
+                content: ''
+                border-bottom: 2px solid rgba(161,100,240,.2)
+                position: absolute
+                bottom: -1px
+                left: 0
+                width: calc(100% - 8px)
+            
+            &__nav
+                &__item
+                    transition: .15s ease-out
+                    border-radius: 5px 5px 0 0
+
+                    &:hover
+                        background: #fff
+
+                    &.active
+                        background: #fff
+                        border-radius: 5px 5px 0 0
+
+    &__tabs
+        &__toggles
+            display: flex
+            justify-content: space-between
+            margin-bottom: 40px
+
+            &-item
+                border: 2px solid rgba(161,100,240,.1)
+                border-radius: 5px
+                font-weight: 500
+                background: rgba(161,100,240,.1)
+                background-origin: content-box
+                background-clip: padding-box
+                height: 48px
+                line-height: 40px
+                padding: 0 13px
+                cursor: pointer
+                letter-spacing: .9px
+                transition: .15s ease-out
+
+                &:hover
+                    background: #fff
+                    border-color: #fff
+                    color: $cPurple
+
+                &._active
+                    background: none
+                    border-color: $cPurple
+                    color: $cPurple
+                    cursor: default
+
+        &__wrap
+        
+        &__item
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            
+            a
+                position: relative
+                display: block
+                background: $cPurple
+                border-radius: 8px
+                color: $cPurple
+                outline: none
+                margin-bottom: 20px
+
+                &:hover
+                    .hover-block
+                        opacity: 1
+
+                    img
+                        opacity: .4
+
+                .hover-block
+                    position: absolute
+                    background: #fff
+                    width: 180px
+                    height: 180px
+                    border-radius: 50%
+                    top: 50%
+                    left: 50%
+                    margin-top: -90px
+                    margin-left: -90px
+                    opacity: 0
+                    transition: .15s ease-out
+                    
+                    &::before
+                        content: ''
+                        background: #fff
+                        position: absolute
+                        height: 40px
+                        width: 115px
+                        top: 24px
+                        left: 50%
+                        margin-left: -56px
+                        z-index: 3
+
+                    &::after
+                        content: ''
+                        background: #fff
+                        position: absolute
+                        height: 40px
+                        width: 56px
+                        bottom: 24px
+                        left: 50%
+                        margin-left: -28px
+                        z-index: 3
+
+                    .dashed-block
+                        position: absolute
+                        border: 2px dashed #dcdcdc
+                        width: 122px
+                        height: 122px
+                        border-radius: 50%
+                        z-index: 1
+                        top: 29px
+                        left: 29px
+                        animation: infiniteCircle 12s linear infinite
+
+                    .inner-block
+                        display: flex
+                        position: relative
+                        align-items: center
+                        justify-content: center 
+                        height: 100%
+                        width: 100%
+                        font-size: 35px
+                        background: url('../img/icons/hover-text.png') no-repeat 41px 27px
+                        border-radius: 50%
+                        z-index: 5
+
+            img
+                display: block
+                border-radius: 8px
+                transition: .15s ease-out
+
+
+
+    &__calc
+        background: url('../img/backgrounds/calc-block-bg.jpg') no-repeat center -30px
+        padding-top: 80px
+        padding-bottom: 180px
+        margin-bottom: -121px
+
+        &__block
+            background: #fff
+            border-radius: 8px
+            padding-top: 72px
+            padding-bottom: 80px
+
+        &__title
+            font-family: $crz
+            font-size: 50px
+            text-transform: uppercase
+            text-align: center
+            letter-spacing: 3px
+            line-height: 60px
+            margin-bottom: 10px
+
+        &__sub-title
+            font-weight: 500
+            font-size: 25px
+            text-align: center
+            letter-spacing: 1.5px
+            margin-bottom: 57px
+
+        &__wrap
+            display: flex
+            padding: 0 80px 0 100px
+            justify-content: space-between
+
+        &__left
+            width: 521px
+            padding-right: 41px
+
+        &__right
+            width: 440px
+
+        &__slide
+            margin-bottom: 37px
+
+            &-wrap
+                position: relative
+                display: flex
+
+            &-input
+                border: 2px solid $cPurple
+                width: 48px
+                height: 48px
+                font-family: $baseFont
+                font-weight: 500
+                border-radius: 5px
+                text-align: center
+                outline: none
+                padding-bottom: 4px
+                margin-right: 28px
+
+            &-numbers
+                position: absolute
+                top: -8px
+                left: 75px
+                font-weight: 500
+                font-size: 14px
+                transition: .15s ease-out
+                display: flex
+                justify-content: space-between
+                width: calc(100% - 131px)
+
+                ._active
+                    color: $cPurple
+
+            &-js
+                width: calc(100% - 134px)
+                margin-right: 21px
+                background: $cPurple
+                height: 4px
+                border-radius: 5px
+                margin-top: 44px
+
+                .ui-slider-range
+                    background: $cPurple
+                    height: 4px
+                    border-radius: 5px
+
+                .ui-slider-handle
+                    background: $cPurple
+                    height: 20px
+                    width: 20px
+                    border-radius: 50%
+                    box-shadow: 0 3px 13px rgba(183,65,226,.4)
+                    outline: none
+                    top: -8px
+                    cursor: pointer
+
+            &-help
+                position: relative
+                margin-top: 14px
+                height: 21px
+
+                &._show
+                    .photo-session__calc__slide-hint
+                        opacity: 1
+                        visibility: visible
+                        transform: translateY(0)
+
+                .fa
+                    font-size: 21px
+                    cursor: pointer
+
+            &-hint
+                position: absolute
+                bottom: 33px
+                opacity: 0
+                visibility: hidden
+                width: 207px
+                padding: 15px 20px
+                font-size: 13px
+                color: #fff
+                background: $cPurple
+                box-shadow: 0 16px 59px rgba(142,91,208,.22)
+                border-radius: 8px
+                line-height: 20px
+                left: -92px
+                transition: .15s ease-out
+                transform: translateY(-15px)
+                z-index: 20
+
+                &::after
+                    content: ''
+                    border-top: 4px solid $cPurple
+                    border-left: 5px solid transparent
+                    border-right: 5px solid transparent
+                    position: absolute
+                    bottom: -4px
+                    left: 50%
+                    margin-left: -7px
+
+
+        &__label
+            font-weight: 500
+            letter-spacing: .9px
+            margin-bottom: 13px
+
+        &__tabs
+            margin-top: 40px
+
+            &-toggles
+                display: flex
+                position: relative
+                margin-bottom: 30px
+
+                &::after
+                    content: ''
+                    border-bottom: 2px solid rgba(161,100,240,.3)
+                    position: absolute
+                    left: 0
+                    bottom: -2px
+                    width: 100%
+
+                &-item
+                    width: 50%
+                    position: relative
+                    height: 67px
+                    text-align: center
+                    font-weight: 500
+                    font-size: 18px
+                    color: $cPurpleDark
+                    border-radius: 5px 5px 0 0
+                    cursor: pointer
+                    transition: background .15s ease-out, color .15s ease-out
+                    line-height: 65px
+                    letter-spacing: 1px
+
+                    &::before
+                        content: ''
+                        background: $cPurple
+                        position: absolute
+                        width: 100%
+                        height: 4px
+                        border-radius: 0 0 3px 3px
+                        left: 0
+                        bottom: -3px
+                        opacity: 0
+                        transition: .15s ease-out
+
+                    &::after
+                        content: ''
+                        border-top: 6px solid $cPurple
+                        border-left: 6px solid transparent
+                        border-right: 6px solid transparent
+                        position: absolute
+                        bottom: -9px
+                        left: 50%
+                        opacity: 0
+                        transition: .15s ease-out
+                        margin-left: -6px
+
+                    &:hover
+                        background: #eaf1f2
+                        color: $cPurple
+
+                        &::before
+                            opacity: 1
+
+                        &::after
+                            opacity: 1
+
+                    &._active
+                        cursor: default
+                        background: #eaf1f2
+                        color: $cPurple
+
+                        &::before
+                            opacity: 1
+
+                        &::after
+                            opacity: 1
+
+            &-wrap
+
+            &-item
+                display: none
+
+                &._active
+                    display: block
+
+            &-line
+                display: flex
+                height: 58px
+                justify-content: space-between
+                align-items: center
+                padding-bottom: 4px
+                padding-right: 18px
+                border: 2px solid transparent
+
+                &:nth-child(even)
+                    border-color: rgba(161,100,240,.2)
+                    border-radius: 5px
+
+                &-item
+                    font-weight: 500
+                    letter-spacing: .9px
+
+                    &--first
+                        width: 185px
+                        padding: 0 0 0 20px
+
+                &-btn
+                    border: 2px solid $cPurple
+                    border-radius: 5px
+                    height: 34px
+                    width: 89px
+                    font-size: 13px
+                    cursor: pointer
+                    margin-left: 10px
+                    margin-top: 4px
+                    letter-spacing: .5px
+
+        &__text
+            margin-bottom: 23px
+
+            &-item
+                line-height: 26px
+                font-weight: 500
+                display: flex
+                letter-spacing: .9px
+                margin-bottom: 26px
+                padding-right: 20px
+
+                &:last-child
+                    margin-bottom: 0
+
+                .fa
+                    font-size: 14px
+                    color: $cPurple
+                    margin-top: 6px
+                    margin-right: 9px
+
+        &__info
+            font-weight: 500
+            line-height: 30px
+            text-transform: uppercase
+            color: $cPurple
+            letter-spacing: .9px
+            margin-bottom: 19px
+
+        &__summ
+            margin-bottom: 24px
+
+            &-text
+                font-weight: 500
+                font-size: 25px
+                line-height: 30px
+                color: $cPurpleDark
+                letter-spacing: 1.5px
+                margin-bottom: 17px
+
+            &-input
+                font-family: $crz
+                font-size: 50px
+                color: $cPurple
+                line-height: 60px
+                letter-spacing: 2.6px
+
+        &__btn
+            width: calc(100% - 20px)
+            height: 65px
+            letter-spacing: .8px
+
+
+    &__select-package
+        margin-bottom: 72px
+
+        &__title
+            text-align: center
+            text-transform: uppercase
+            font-size: 50px
+            font-family: $crz
+            letter-spacing: 3px
+            margin-bottom: 54px
+
+        &__wrap
+            display: flex
+            margin-bottom: 7px
+            align-items: flex-start
+
+        &__item
+            background: #fff url('../img/backgrounds/select-package-item-bg2.png')
+            position: relative
+            width: 420px
+            border-radius: 8px
+            margin-top: 40px
+            padding-top: 43px
+            padding-bottom: 46px
+
+            &:nth-child(1)
+                box-shadow: 0 2px 0 #5d4571
+
+                &::before
+                    background-color: #97949a
+
+            &:nth-child(2)
+                z-index: 5
+                margin-left: -40px
+                margin-right: -40px
+                margin-top: 0
+                box-shadow: 0 16px 59px rgba(142,91,208,.22), 0 2px 0 #9f63ed
+                padding-bottom: 37px
+
+                &::before
+                    background-color: #8692ed
+
+                .photo-session__select-package__item
+                    &-btn
+                        margin-right: 40px
+                        width: calc(100% - 80px)
+
+                    &-price
+                        font-size: 60px
+                        margin-top: 52px
+                        text-transform: uppercase
+                        margin-bottom: 71px
+                    
+            &:nth-child(3)
+                box-shadow: 0 2px 0 #838ef3
+
+                &::before
+                    background-color: #9a72ea
+
+                .photo-session__select-package__item
+                    &-btn
+                        margin-left: 20px
+
+            &::before
+                content: ''
+                background-image: url('../img/backgrounds/select-package-item-bg.png')
+                background-repeat: no-repeat
+                position: absolute
+                width: 100%
+                height: 270px
+                top: 0
+                left: 0
+                border-radius: 8px 8px 0 0
+
+            &-title
+                font-family: $crz
+                font-size: 40px
+                text-transform: uppercase
+                text-align: center
+                color: #fff
+                position: relative
+                z-index: 3
+                letter-spacing: 2px
+                margin-bottom: 105px
+
+            &-wrap
+                position: relative
+                z-index: 3
+                padding: 0 20px 0 40px
+                margin-bottom: 8px
+
+            &-line
+                display: flex
+                min-height: 23px
+                line-height: 24px
+                padding: 15px 20px 19px 19px
+                font-weight: 500
+                letter-spacing: .8px
+
+                &:nth-child(odd)
+                    background: rgba(161,100,240,.1)
+
+                .fa
+                    color: $cPurple
+                    margin-right: 19px
+                    position: relative
+                    top: 5px
+
+            &-price
+                text-align: center
+                font-family: $crz
+                font-size: 50px
+                line-height: 60px
+                color: $cPurple
+                letter-spacing: 1.4px
+                margin-bottom: 27px
+                text-transform: uppercase
+
+            &-btn
+                width: 100%
+                height: 56px
+                font-weight: 500
+                font-size: 18px
+                margin: 0 0 0 40px
+                width: calc(100% - 60px)
+                letter-spacing: 1.2px
+
+    &__interiors
+        background: url('../img/backgrounds/interior-bg.jpg') no-repeat center top
+        padding-top: 121px
+        // padding-bottom: 380px
+
+        &__title
+            text-transform: uppercase
+            text-align: center
+            font-family: $crz
+            font-size: 50px
+            letter-spacing: 3.3px
+            margin-bottom: 10px
+
+        .interiors
+            margin-bottom: 36px
+
+            &__info
+                margin-bottom: 79px
+
+            &__numbers
+                border-color: #fff
+
+                &::before
+                    border-color: #fff
+
+                &__item
+                    &::before
+                        border-color: #fff
+
+                    &::after
+                        border-color: #fff
+
+                    &:hover
+                        .inner-block
+                            background: #fff
+
+        .example-works
+            margin-bottom: 105px
+
+            &__slider
+                .slick-arrow
+                    &:hover
+                        color: #fff
+
+                        .arrow
+                            border-color: #fff
+
+
+    &__views
+        background: url('../img/backgrounds/views-bg.png') no-repeat center
+
+        &__title
+            font-family: $crz
+            font-size: 50px
+            text-transform: uppercase
+            letter-spacing: 3px
+            text-align: center
+            margin-bottom: 40px
+
+        &__wrap
+            display: flex
+            justify-content: space-between
+            margin-bottom: -70px
+
+            &:last-child
+                margin-bottom: 0
+
+        &__text-block
+            max-width: 600px
+            width: 100%
+            margin-top: 111px
+
+            p:first-of-type
+                margin-top: 0
+
+        &__sub-title
+            font-weight: 500
+            font-size: 25px
+            margin-bottom: 17px
+            letter-spacing: 1.5px
+
+
+    &__steps
+        margin-bottom: 92px
+        
+        &__title
+            font-family: $crz
+            font-size: 50px
+            text-transform: uppercase
+            text-align: center
+            letter-spacing: 3px
+            margin-bottom: 106px
+
+        &__wrap
+            display: flex
+            flex-wrap: wrap
+            align-items: flex-start
+            background: url('../img/backgrounds/steps-bg.png') no-repeat 45px 55px
+
+        &__item
+            display: flex
+            align-items: center
+            position: relative
+            margin-bottom: 110px
+
+            &:nth-child(1)
+                width: 290px
+                margin-right: 115px
+
+                .photo-session__steps__icon
+                    font-size: 37px
+
+            &:nth-child(2)
+                width: 381px
+                margin-right: 50px
+                align-items: flex-start
+
+                .photo-session__steps__number
+                    left: 124px
+
+                .photo-session__steps__icon
+                    font-size: 38px
+                    margin-right: 20px
+
+                .photo-session__steps__text-block
+                    margin-top: 16px
+
+            &:nth-child(3)
+                width: 325px
+
+                .photo-session__steps__icon
+                    font-size: 28px
+                    margin-right: 20px
+
+                .photo-session__steps__text-block
+                    margin-top: 19px
+
+            &:nth-child(4)
+                width: 335px
+                margin-right: 68px
+                margin-top: 15px
+                align-items: flex-start
+
+                .photo-session__steps__icon
+                    font-size: 37px
+                    margin-top: -14px
+
+            &:nth-child(5)
+                width: 360px
+                margin-right: 70px
+                align-items: flex-start
+
+                .photo-session__steps__number
+                    top: 20px
+                    left: 124px
+
+                .photo-session__steps__icon
+                    font-size: 34px
+                    margin-right: 23px
+
+                .photo-session__steps__text-block
+                    margin-top: 15px
+
+            &:nth-child(6)
+                width: 311px
+                align-items: flex-start
+
+                .photo-session__steps__icon
+                    font-size: 37px
+                    margin-right: 25px
+
+                .photo-session__steps__text-block
+                    margin-top: 13px
+
+                .photo-session__steps__number
+                    left: 126px
+
+            &:nth-child(7)
+                width: 370px
+                align-items: flex-start
+                margin-top: 15px
+                margin-right: 30px
+                margin-bottom: 0
+
+                .photo-session__steps__icon
+                    font-size: 37px
+                    margin-top: -18px
+
+                .photo-session__steps__number
+                    top: 3px
+                    left: 115px
+
+            &:nth-child(8)
+                width: 320px
+                margin-right: 115px
+                margin-bottom: 0
+
+                .photo-session__steps__icon
+                    font-size: 36px
+                    margin-right: 30px
+
+                .photo-session__steps__number
+                    left: 128px
+
+            &:nth-child(9)
+                width: 335px
+                align-items: flex-start
+                margin-bottom: 0
+
+                .photo-session__steps__number
+                    top: 17px
+                    left: 127px
+
+                .photo-session__steps__icon
+                    font-size: 35px 
+                    margin-right: 21px
+
+                .photo-session__steps__text-block
+                    margin-top: 14px
+
+
+        &__number
+            font-size: 250px
+            line-height: 60px
+            top: 15px
+            left: 105px
+            color: #fff
+            font-weight: 500
+            position: absolute
+
+        &__icon
+            background: url('../img/icons/steps-icon-bg.png') no-repeat
+            width: 116px
+            height: 116px
+            display: flex   
+            justify-content: center
+            align-items: center
+            color: #fff
+            position: relative
+            z-index: 3
+            margin-right: 4px
+
+        &__text-block
+            width: calc(100% - 120px)
+            position: relative
+            z-index: 3
+
+        &__sub-title
+            font-weight: 50
+            font-size: 18px
+            text-transform: uppercase
+            letter-spacing: .8px
+
+        &__text
+            line-height: 26px
+            letter-spacing: 0.8px
+
+
+    &__booking
+        background: url('../img/backgrounds/booking-bg.jpg') no-repeat center top
+        padding-bottom: 180px
+        margin-bottom: -146px
+
+        &__wrap
+            display: flex
+            border-radius: 5px
+            overflow: hidden
+
+        &__left
+            width: 780px
+            background: #fff
+            padding: 0 100px
+
+        &__right
+            width: calc(100% - 780px)
+
+            img
+                display: block
+
+        &__title
+            font-family: $crz
+            font-size: 50px
+            color: $cPurple
+            text-transform: uppercase
+            margin-top: 74px
+            letter-spacing: 3.1px
+            line-height: 60px
+            margin-bottom: 9px
+
+        &__sub-title
+            font-weight: 50
+            font-size: 25px
+            letter-spacing: 1.6px
+            color: $cPurple
+            margin-bottom: 28px
+
+        &__inputs
+            display: flex
+            justify-content: space-between
+
+        &__input-item
+            position: relative
+
+        &__input
+            background: none
+            border: 2px solid $cPurple
+            border-radius: 3px
+            width: 280px
+            height: 48px
+            font-family: $baseFont
+            font-weight: 50
+            font-size: 18px
+            padding: 0 66px 5px 18px
+            outline: none
+
+        &__ico
+            position: absolute
+            top: 0 
+            right: 0
+            background: $cPurple
+            height: 100%
+            width: 48px
+            color: #fff
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 0 3px 3px 0
+
+        &__btn
+            width: 100%
+            height: 56px
+            margin-top: 10px
+            letter-spacing: .9px
+
+
+@keyframes infiniteCircle
+    0%
+        transform: rotate(0)
+
+    100%
+        transform: rotate(360deg)
+
+
+@keyframes scrollDown
+    0%
+        transform: translateY(0)
+
+    50%
+        transform: translateY(0)
+
+    75%
+        transform: translateY(7px)
+
+    100%
+        transform: translateY(0)
+
+
+
+._ready
+    .photo-session
+        &__banner
+            &__title
+                transform: translateY(0)
+                opacity: 1

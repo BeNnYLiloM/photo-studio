@@ -1,0 +1,24 @@
+block variables
+
+header.main-header
+    // Begin .main-header__top
+
+    .main-header__top
+        .container
+            .flex-wrap.flex-wrap--jcsb.flex-wrap--aic
+                .logo
+                    a(href="index.html") ФОТОСТУДИЯ №1
+
+                .phones
+                    .flex-wrap
+                        .phones__item
+                            a(href='viber://add?number=+74952112041')
+                                +fa('phone')
+                                | +7 (495) 211-20-41
+
+                        .phones__item
+                            a(href='https://api.whatsapp.com/send?phone=+79852112041', target='_blank')
+                                +icon('whatsapp')
+                                | +7 (985) 211-20-41
+
+    // End .main-header__top

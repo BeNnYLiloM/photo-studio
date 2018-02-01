@@ -1,0 +1,54 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Гардероб'
+    - var activeLink = 'Гардероб'
+
+block content
+    // Begin breadcrumbs
+    .container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href='index.html') Главная
+
+            .breadcrumbs__item.breadcrumbs__item--current Гардероб
+    // End breadcrumbs
+
+    // Begin wardrobe
+    .wardrobe
+        .container
+            h1 Гардероб
+            .wardrobe__text
+                p Гардероб нашей фотостудии постоянно обновляется и пополняется. На этой странице вы можете посмотреть и подобрать одежду и аксессуары подходящую по стилистике для вашей фотосессии.
+
+            .category-filter
+                .category-filter__selected
+                    span Все
+                    +fa('chevron-down')
+
+                .category-filter__dropdown
+                    .category-filter__item(data-filter='all') Все
+                    .category-filter__item(data-filter='.category-a') Платья
+                    .category-filter__item(data-filter='.category-b') Обувь
+                    .category-filter__item(data-filter='.category-c') Аксессуары
+
+            .mix-container
+                .mix.category-a(data-order='1')
+                    img(src='static/img/content/category-a-img.jpg', alt='')
+                .mix.category-b(data-order='2')
+                    img(src='static/img/content/category-b-img.jpg', alt='')
+                .mix.category-c(data-order='3')
+                    img(src='static/img/content/category-c-img.jpg', alt='')
+                .mix.category-a(data-order='4')
+                    img(src='static/img/content/category-a-img.jpg', alt='')
+                .mix.category-b(data-order='5')
+                    img(src='static/img/content/category-b-img.jpg', alt='')
+                .mix.category-c(data-order='6')
+                    img(src='static/img/content/category-c-img.jpg', alt='')
+                .mix.category-a(data-order='7')
+                    img(src='static/img/content/category-a-img.jpg', alt='')
+                .mix.category-b(data-order='8')
+                    img(src='static/img/content/category-b-img.jpg', alt='')
+                .mix.category-c(data-order='9')
+                    img(src='static/img/content/category-c-img.jpg', alt='')
+    // End wardrobe

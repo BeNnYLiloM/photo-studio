@@ -1,0 +1,332 @@
+.certificates
+    margin-bottom: 43px
+    
+    &__banner
+        display: flex
+        align-items: center
+        margin-top: 70px
+        margin-bottom: 70px
+
+        &__left-side
+            background: url('../img/backgrounds/certificates-banner-left.jpg') no-repeat
+            width: 100%
+            max-width: 700px
+            height: 547px
+            box-shadow: 0 16px 59px rgba(142,91,208,.6)
+
+        &__right-side
+            background: url('../img/backgrounds/certificates-banner-right.jpg') no-repeat
+            width: 100%
+            max-width: 480px
+            height: 507px
+            border-radius: 0 8px 8px 0
+
+    &__table
+        margin-bottom: 54px
+
+        &__head
+            font-family: $crz
+            font-size: 40px
+            text-transform: uppercase
+            height: 54px
+            margin-bottom: 14px
+
+            .certificates__table__td
+                padding-bottom: 0
+                line-height: normal
+                letter-spacing: 2.4px
+
+                &:nth-child(2)
+                    color: $cPurpleDark
+
+                &:nth-child(3)
+                    color: #868cfa
+
+                &:nth-child(4)
+                    color: $cPurple
+
+                &:nth-child(5)
+                    color: #f1436c
+
+        &__body
+            .certificates__table__tr
+                &:nth-child(even)
+                    border: 2px solid rgba(161,100,240,.2)
+                    border-radius: 3px
+
+                &:last-child
+                    .certificates__table__td--first
+                        padding-left: 51px
+
+                &:hover
+                    .certificates__table__td
+                        color: $cPurple
+
+        &__bottom
+            margin-top: 18px
+
+            .certificates__table__td
+                height: auto
+                text-transform: uppercase
+                color: $cPurpleDark
+
+        &__tr
+            display: table
+            width: 100%
+
+        &__td
+            display: table-cell
+            width: 220px
+            font-weight: 500
+            vertical-align: middle
+            height: 54px
+            line-height: 20px
+            padding-bottom: 4px
+            letter-spacing: .8px
+            transition: .15s ease-out
+
+            &--first
+                width: 300px
+                padding-left: 18px
+
+                .fa
+                    color: $cPurple
+                    font-size: 14px
+                    margin-right: 18px            
+
+        .price
+            font-family: $crz
+            font-size: 40px
+            line-height: normal
+            margin-bottom: 29px
+
+        .order-btn
+            width: 162px
+            height: 56px
+
+    &__title
+        font-family: $crz
+        font-size: 50px
+        text-transform: uppercase
+        text-align: center
+        letter-spacing: 3px
+        margin-bottom: 36px
+    
+    &__include
+        margin-bottom: 16px
+
+        &__wrap
+            display: flex
+            justify-content: space-between
+
+        &__left
+            width: 580px
+
+            .certificates__include__item
+                &:nth-child(1)
+                    .certificates__include__icon
+                        font-size: 35px
+
+                &:nth-child(2)
+                    .certificates__include__icon
+                        font-size: 37px
+
+                &:nth-child(3)
+                    .certificates__include__icon
+                        font-size: 37px
+
+                &:nth-child(4)
+                    .certificates__include__icon
+                        font-size: 37px
+
+        &__right
+            width: 580px
+
+            .certificates__include__item
+                &:nth-child(1)
+                    .certificates__include__icon
+                        font-size: 33px
+
+                &:nth-child(2)
+                    .certificates__include__icon
+                        font-size: 33px
+
+                &:nth-child(3)
+                    .certificates__include__icon
+                        font-size: 30px
+
+                &:nth-child(4)
+                    .certificates__include__icon
+                        font-size: 35px
+
+            .certificates__include__text
+                width: calc(100% - 100px)
+
+        &__item
+            margin-bottom: 20px
+            display: flex
+            align-items: center
+
+        &__icon
+            color: #fff
+            background: url('../img/icons/contacts-labels.png') no-repeat
+            width: 88px
+            height: 81px
+            margin-right: 13px
+            display: flex
+            align-items: center
+            justify-content: center
+
+        &__text
+            font-weight: 500
+            font-size: 18px
+            line-height: 30px
+            width: calc(100% - 180px)
+            letter-spacing: 1px
+
+    &__module
+        &__wrap
+            display: flex
+            justify-content: space-between
+            margin-top: 55px
+
+        &__left
+            width: 780px
+            position: relative
+
+            &::before
+                content: ''
+                background: url('../img/backgrounds/certificates-banner-left.jpg') no-repeat
+                position: absolute
+                top: 80px
+                left: 0
+                width: 700px
+                height: 547px
+
+        &__right
+            width: 320px
+
+        &__certificate
+            position: relative
+            border: 2px solid $cPurpleDark
+            margin-left: 80px
+            border-radius: 8px
+            background: #fff
+            padding: 0 97px 67px
+
+        &__code
+            position: absolute
+            top: 0
+            left: 0
+            border: 2px solid $cPurpleDark
+            border-top: none
+            border-left: none
+            border-radius: 0 0 8px 0
+            color: $cPurpleDark
+            font-weight: 500
+            text-transform: uppercase
+            text-align: center
+            width: 118px
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 64px
+            letter-spacing: 1px
+
+        &__title
+            text-align: center
+            font-family: $crz
+            font-size: 40px
+            line-height: 60px
+            color: $cPurple
+            text-transform: uppercase
+            max-width: 370px
+            margin: 65px auto 22px
+            letter-spacing: 2.4px
+
+        &__text
+            font-weight: 500
+            font-size: 18px
+            line-height: 30px
+            height: 125px
+            letter-spacing: 1.1px
+            margin-bottom: 29px
+
+        &__help-text
+            font-weight: 500
+
+            .text
+                margin-bottom: 20px
+                letter-spacing: .9px
+
+            .phones
+                font-size: 25px
+                letter-spacing: 1px
+
+        &__input
+            margin-bottom: 37px
+
+            .category-filter
+                margin-bottom: 0
+
+                &__selected
+                    height: 44px
+                    line-height: 40px
+                    padding: 0 17px
+                    letter-spacing: .9px
+
+                    .fa
+                        top: 15px
+
+                &__item
+                    height: 44px
+                    line-height: 40px
+                    letter-spacing: .9px
+
+        &__label
+            font-weight: 500
+            letter-spacing: .9px
+            color: $cPurpleDark
+            line-height: 12px
+            margin-bottom: 19px
+
+        &__title-input
+            border: 2px solid $cPurple
+            border-radius: 3px
+            width: 100%
+            height: 48px
+            padding: 0 18px 2px
+            font-family: $baseFont
+            font-weight: 500
+            letter-spacing: .5px
+            background: none
+            outline: none
+
+        &__text-input
+            border: 2px solid $cPurple
+            border-radius: 3px
+            width: 100%
+            height: 267px
+            background: none
+            resize: none
+            padding: 10px 18px
+            font-family: $baseFont
+            font-weight: 500
+            letter-spacing: .5px
+            line-height: 22px
+
+        .order-certificate-btn
+            width: 100%
+            height: 56px
+            letter-spacing: .6px
+
+    &__text
+        p
+            line-height: 40px
+            letter-spacing: .9px
+
+
+
+
+@media screen and (max-width: 1250px)
+    

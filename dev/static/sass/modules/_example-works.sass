@@ -1,0 +1,87 @@
+.example-works
+    &__title
+        font-family: $crz
+        text-align: center
+        font-size: 50px
+        text-transform: uppercase
+        letter-spacing: 3.3px
+        margin-bottom: 37px
+
+    &__item
+        padding-bottom: 140px
+        margin-bottom: 58px
+
+        &:last-child
+            margin-bottom: 0
+
+        &__title
+            text-align: center
+            font-family: $crz
+            font-size: 40px
+            text-transform: uppercase
+            letter-spacing: 2.5px
+            margin-bottom: 60px
+
+    &__slider
+        &__item
+            outline: none
+            border-radius: 8px
+            overflow: hidden
+            margin: 0 10px
+
+        .slick-arrow
+            position: absolute
+            z-index: 10
+            bottom: -138px
+            border: none
+            outline: none
+            background: none
+            cursor: pointer
+            font-family: $baseFont
+            font-weight: 500
+            color: $cPurpleDark
+            display: flex
+            align-items: center
+            letter-spacing: .5px
+            transition: color .15s ease-out
+
+            &:hover
+                color: $cPurple
+
+                .arrow
+                    background: none
+                    border-color: $cPurpleDark
+
+            .arrow
+                display: flex
+                align-items: center
+                justify-content: center
+                background: rgba(161,100,240,.2)
+                border-radius: 3px
+                border: 2px solid rgba(161,100,240,.2)
+                height: 56px
+                width: 56px
+                background-origin: content-box
+                background-clip: padding-box
+                transition: background .15s ease-out, border .15s ease-out
+
+                .fa
+                    position: relative
+                    top: 1px
+
+        .slick-prev
+            left: 50%
+            margin-left: -142px
+
+            .arrow
+                margin-left: 24px
+
+        .slick-next
+            right: 50%
+            margin-right: -151px
+
+            .arrow
+                margin-right: 24px
+
+                .fa
+                    left: 1px

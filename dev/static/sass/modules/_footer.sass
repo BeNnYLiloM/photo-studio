@@ -1,0 +1,159 @@
+.main-footer
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 673px
+    background: url("../img/backgrounds/footer-bg.jpg") no-repeat center top
+    padding-top: 128px
+
+    &__top
+        margin-bottom: 57px
+        position: relative
+        z-index: 5
+
+    &__bottom
+        position: relative
+        z-index: 5
+
+    &__nav
+        position: relative
+        z-index: 5
+        max-width: 400px
+        flex-wrap: wrap
+
+        &__column
+            margin-right: 10px
+            min-width: 200px
+
+        &__item
+            letter-spacing: 1px
+            margin-bottom: 14px
+            width: 200px
+
+            a
+                text-decoration: none
+                color: #fff
+                border-bottom: 1px solid transparent
+                transition: .3s ease-out
+
+                &:hover
+                    color: #000
+
+    &__map
+        position: absolute
+        bottom: 0
+        left: 50%
+        margin-left: -960px
+        width: 1920px
+        height: 395px
+
+        &__wrap
+            position: absolute
+            right: 0
+            top: 0
+            width: 1195px
+            height: 100%
+
+            &::before
+                content: ""
+                background: url('../img/icons/footer-label.png') no-repeat
+                position: absolute
+                left: 0
+                top: -1px
+                width: 291px
+                height: 395px
+                z-index: 3
+
+        #footerMap
+            width: 1195px
+            height: 100%
+            position: absolute
+            top: 0
+            right: 0
+
+    .phones
+        &__item
+            a
+                color: #fff
+
+            .fa
+                color: #fff
+                font-size: 20px
+                top: 0
+                margin-right: 7px
+
+
+.logo-footer
+    background: #000
+
+    a
+        display: block
+        text-decoration: none
+        color: #fff
+        font-family: $crz
+        font-size: 30px
+        height: 62px
+        line-height: 66px
+        letter-spacing: 2px
+        padding: 0 15px 0 19px
+
+
+.social-links
+    align-items: center
+    margin: 3px 11px 0 26px
+
+    &__item
+        color: #fff
+        text-decoration: none
+        margin-left: 20px
+        transition: color .15s ease-out
+
+        &:hover
+            color: #000
+
+        &:nth-child(1)
+            .fa
+                font-size: 25px
+
+        &:nth-child(2)
+            .fa
+                font-size: 22px
+
+        &:nth-child(3)
+            .fa
+                font-size: 22px
+
+
+.prepay-btn
+    border: none
+    background: #fff
+    border-radius: 4px
+    height: 62px
+    line-height: 58px
+    padding: 0 0 2px
+    outline: none
+    font-weight: 500
+    font-size: 18px
+    color: $cPurpleDark
+    width: 239px
+    letter-spacing: .7px
+    cursor: pointer
+    transition: .2s ease-out
+
+    &:hover
+        box-shadow: 0 16px 59px rgba(86,37,150,.6)
+
+    &:active
+        box-shadow: none
+
+
+@media screen and (max-width: 1080px)
+    .main-footer
+        background: url("../img/backgrounds/footer-bg2.jpg") no-repeat center top
+
+        &__nav
+            max-width: 100%
+
+            &__item
+                width: 220px

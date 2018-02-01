@@ -1,0 +1,64 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Интерьер'
+    - var activeLink = 'Интерьеры'
+
+block content
+    // Begin breadcrumbs
+    .container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href='index.html') Главная
+
+            .breadcrumbs__item.breadcrumbs__item--current Интерьеры
+    // End breadcrumbs
+
+    // Begin interiors
+    .interiors
+        .container
+            h1 Интерьеры
+            
+            .interiors__imgs
+                img(src='static/img/content/interiors-img-1.jpg', alt='')
+                img(src='static/img/content/interiors-img-2.jpg', alt='')
+                img(src='static/img/content/interiors-img-3.jpg', alt='')
+                img(src='static/img/content/interiors-img-4.jpg', alt='')
+                img(src='static/img/content/interiors-img-5.jpg', alt='')
+                img(src='static/img/content/interiors-img-6.jpg', alt='')
+                img(src='static/img/content/interiors-img-7.jpg', alt='')
+                img(src='static/img/content/interiors-img-8.jpg', alt='')
+
+            .interiors__info
+                .interiors__info__left-side
+                    h2 8 интерьеров в одном большом зале
+                    p В нашей просторной, светлой фотостудии расположились 8 интерьеров для фотосессии. Это очень удобно т.к. у нас вы можете провести несколько абсолютно разных по стилистике съемок, не выходя из зала.
+
+                .interiors__info__right-side
+                    .interiors__numbers
+                        .interiors__numbers__item
+                            .border-block
+                                .inner-block 1
+                        .interiors__numbers__item
+                            .border-block
+                                .inner-block 2
+                        .interiors__numbers__item
+                            .border-block
+                                .inner-block 3
+                        .interiors__numbers__item
+                            .border-block
+                                .inner-block 4
+                        .interiors__numbers__item
+                            .border-block
+                                .inner-block 5
+                        .interiors__numbers__item
+                            .border-block
+                                .inner-block 6
+                        .interiors__numbers__item
+                            .border-block
+                                .inner-block 7
+                        .interiors__numbers__item
+                            .border-block
+                                .inner-block 8
+
+    // End interiors

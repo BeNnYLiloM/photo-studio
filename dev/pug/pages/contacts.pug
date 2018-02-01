@@ -1,0 +1,74 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Контакты'
+    - var activeLink = 'Контакты'
+
+block content
+    // Begin breadcrumbs
+    .container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href='index.html') Главная
+
+            .breadcrumbs__item.breadcrumbs__item--current Контакты
+    // End breadcrumbs
+
+    // Begin contacts
+    .contacts
+        .container
+            h1 Контакты
+
+            .contacts__info
+                .contacts__item
+                    .contacts__item__icon
+                        +fa('phone')
+
+                    .contacts__item__wrap
+                        .contacts__item__title Телефон:
+                        .contacts__item__text +7 (495) 211-20-41
+
+                .contacts__item
+                    .contacts__item__icon
+                        +icon('metro')
+
+                    .contacts__item__wrap
+                        .contacts__item__title Остановка:
+                        .contacts__item__text Улица 1905 года.
+
+                .contacts__item
+                    .contacts__item__icon
+                        +icon('whatsapp')
+
+                    .contacts__item__wrap
+                        .contacts__item__title Телефон и WhatsApp:
+                        .contacts__item__text
+                            a(href='https://api.whatsapp.com/send?phone=+79852112041', target='_blank') +7 (985) 211-20-41
+
+                .contacts__item
+                    .contacts__item__icon
+                        +fa('map-marker')
+
+                    .contacts__item__wrap
+                        .contacts__item__title Адрес:
+                        .contacts__item__text 2-ая Звенигородская д.13 стр.18Г
+
+            .contacts__where-we
+                .left-side
+                    .title
+                        .icon-block
+                            +icon('feet')
+                        .text Как до нас добраться пешком от метро «Улица 1905 года»
+
+                    .map#mapOne
+                    .video
+                        .youtube(id='tyF8UMs6yGU' data-params='modestbranding=1&showinfo=0&controls=1')
+
+                .right-side
+                    .title
+                        .icon-block
+                            +icon('car')
+                        .text Как до нас добраться на машине
+
+                    .map#mapTwo
+    // End contacts
