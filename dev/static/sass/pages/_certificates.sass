@@ -88,11 +88,16 @@
             &--first
                 width: 300px
                 padding-left: 18px
+                padding-right: 15px
 
                 .fa
                     color: $cPurple
                     font-size: 14px
-                    margin-right: 18px            
+                    margin-right: 18px
+
+            .inner-block
+                display: flex
+                align-items: center
 
         .price
             font-family: $crz
@@ -196,15 +201,16 @@
 
             &::before
                 content: ''
-                background: url('../img/backgrounds/certificates-banner-left.jpg') no-repeat
+                background: url('../img/backgrounds/certificates-banner-left.jpg') no-repeat right top
                 position: absolute
                 top: 80px
                 left: 0
-                width: 700px
+                width: calc(100% - 80px)
                 height: 547px
 
         &__right
             width: 320px
+            margin-left: 20px
 
         &__certificate
             position: relative
@@ -329,4 +335,58 @@
 
 
 @media screen and (max-width: 1250px)
-    
+    .main-wrapper
+        &.certificates-page
+            .main-content
+                background: none
+
+    .certificates
+        &__banner
+            flex-direction: column
+
+            &__left-side
+                order: 2
+
+            &__right-side
+                order: 1
+                border-radius: 8px 8px 0 0
+                overflow: hidden
+
+        &__table
+            &__td
+                width: 18%
+
+                &--first
+                    width: 300px
+
+
+@media screen and (max-width: 1100px)
+    .certificates
+        &__table
+            &__head
+                font-size: 32px
+
+            &__td
+                width: 15%
+
+                &--first
+                    width: 25%
+                    padding-left: 15px
+
+                    .fa
+                        margin-right: 10px
+
+            .price
+                font-size: 32px
+
+            .order-btn
+                width: 130px
+                font-size: 16px
+
+        &__module
+            &__certificate
+                padding: 0 55px 67px
+                margin-left: 50px
+
+            &__title
+                max-width: 460px
