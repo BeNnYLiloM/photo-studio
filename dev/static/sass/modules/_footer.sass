@@ -16,6 +16,10 @@
         position: relative
         z-index: 5
 
+    &__right-side
+        .logo-footer--mob
+            display: none
+
     &__nav
         position: relative
         z-index: 5
@@ -151,9 +155,39 @@
 @media screen and (max-width: 1080px)
     .main-footer
         background: url("../img/backgrounds/footer-bg2.jpg") no-repeat center top
+        height: 890px
+
+        &__top
+            .flex-wrap
+                align-items: flex-start
+
+                .flex-wrap
+                    align-items: center
+                    flex-wrap: wrap
+
+            .logo-footer
+                display: none
+
+            .phones
+                width: 100%
+                display: flex
+                justify-content: space-between
+                margin-top: 20px
+
+                &__item
+                    margin-left: 0
+
+        &__right-side
+            width: 100%
+            justify-content: space-between
+
+            .logo-footer--mob
+                display: block
 
         &__nav
             max-width: 100%
 
             &__item
                 width: 220px
+
+

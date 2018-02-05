@@ -144,16 +144,20 @@ block content
                             | &nbsp;
                         .certificates__table__td
                             .price 6500р
-                            button.default-btn.order-btn Заказать
+                            button.default-btn.order-btn
+                                a.popup-with-form(href='#callback-form') Заказать
                         .certificates__table__td
                             .price 8500р
-                            button.default-btn.order-btn Заказать
+                            button.default-btn.order-btn
+                                a.popup-with-form(href='#callback-form') Заказать
                         .certificates__table__td
                             .price 10500р
-                            button.default-btn.order-btn Заказать
+                            button.default-btn.order-btn
+                                a.popup-with-form(href='#callback-form') Заказать
                         .certificates__table__td
                             .price 20500р
-                            button.default-btn.order-btn Заказать
+                            button.default-btn.order-btn
+                                a.popup-with-form(href='#callback-form') Заказать
 
 
             .certificates__include
@@ -242,17 +246,18 @@ block content
                             .certificates__module__label Пакет фотосессии:
                             .category-filter
                                 .category-filter__selected
-                                    span Мини
+                                    span Мини - 6500р
                                     +fa('chevron-down')
 
                                 .category-filter__dropdown
-                                    .category-filter__item Мини
-                                    .category-filter__item Стандарт
-                                    .category-filter__item Премиум
-                                    .category-filter__item Делюкс
+                                    .category-filter__item Мини - 6500р
+                                    .category-filter__item Стандарт - 8500р
+                                    .category-filter__item Премиум - 10500р
+                                    .category-filter__item Делюкс - 20500р
 
                         .certificates__module__input
-                            button.default-btn.order-certificate-btn Заказать сертификат
+                            button.default-btn.order-certificate-btn
+                                a.popup-with-form(href='#callback-form') Заказать сертификат
 
             .certificates__text
                 p
@@ -315,3 +320,24 @@ block content
 
     // End example-works
 
+
+    form(id="callback-form" class="mfp-hide white-popup-block popup")
+        .popup__close
+            +fa('times')
+
+        .popup__title ФОТОСТУДИЯ №1
+        .popup__form-body
+            .popup__input-item
+                .popup__label-text Ваше имя:
+                input.popup__input(type='text')
+
+            .popup__input-item
+                .popup__label-text Телефон:
+                input.popup__input(type='text')
+
+            .popup__input-item
+                .popup__label-text E-mail:
+                input.popup__input(type='text')
+
+            .popup__input-item
+                button.default-btn.popup__submit(type='submit') Отправить

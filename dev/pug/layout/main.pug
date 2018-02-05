@@ -11,14 +11,14 @@ html(lang="ru-RU")
         script.
             var metaTag=document.createElement('meta');
             metaTag.name = "viewport";
-            if (screen.width <= 628) {
-                metaTag.content = "width=628, user-scalable=false"
+            if (screen.width <= 750) {
+                metaTag.content = "width=750, user-scalable=false"
                 window.addEventListener("orientationchange", function() {
                     viewport = document.querySelector("meta[name=viewport]");
                     if(window.orientation === 90 || window.orientation === -90){
                         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false');
                     } else{
-                        viewport.setAttribute('content', 'width=628, user-scalable=false');
+                        viewport.setAttribute('content', 'width=750, user-scalable=false');
                     };
                 }, false);
             } else{

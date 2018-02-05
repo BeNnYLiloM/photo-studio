@@ -65,8 +65,9 @@ block content
                         | Обработка фото
 
                 .photo-session__banner__links
-                    button.default-btn.order-photo-session-btn Забронировать фотосессию
-                    .calc-pay
+                    button.default-btn.order-photo-session-btn
+                        a.popup-with-form(href='#callback-form') Забронировать фотосессию
+                    a.calc-pay(href='#calc')
                         +icon('calc')
                         span Рассчитать стоимость
 
@@ -76,12 +77,27 @@ block content
         .photo-session__menu
             .container
                 .navbar
-                    - activeLink = activeLink || ''
-                    each navItem in nav
-                        if navItem.title == activeLink
-                            a(href= navItem.link class='navbar__nav__item' + ' active')= navItem.title
-                        else
-                            a(href= navItem.link class='navbar__nav__item')= navItem.title
+                    nav.navbar__nav
+                        .navbar__nav__item(data-dropmenu='1')
+                            a(href='photosession.html' class='navbar__nav__link') Виды фотосессий
+
+                        .navbar__nav__item
+                            a(href='interer.html' class='navbar__nav__link') Интерьеры
+
+                        .navbar__nav__item
+                            a(href='garderob.html' class='navbar__nav__link') Гардероб
+
+                        .navbar__nav__item
+                            a(href='certificates.html' class='navbar__nav__link') Подарочный сертификат
+
+                        .navbar__nav__item
+                            a(href='reviews.html' class='navbar__nav__link') Отзывы
+
+                        .navbar__nav__item
+                            a(href='blog.html' class='navbar__nav__link') Блог
+
+                        .navbar__nav__item
+                            a(href='contacts.html' class='navbar__nav__link') Контакты
 
         .photo-session__tabs.tabs
             .container
@@ -97,56 +113,56 @@ block content
 
                 .photo-session__tabs__wrap.tabs__wrap
                     .photo-session__tabs__item.tabs__item._active(data-tab='1')
-                        a(href='static/img/content/tab-img-1.jpg')
+                        a.photo-item(href='static/img/content/tab-img-1.jpg')
                             img(src='static/img/content/tab-img-1.jpg')
                             .hover-block
                                 .dashed-block
                                 .inner-block
                                     +icon('cert-1')
 
-                        a(href='static/img/content/tab-img-1.jpg')
+                        a.photo-item(href='static/img/content/tab-img-1.jpg')
                             img(src='static/img/content/tab-img-1.jpg')
                             .hover-block
                                 .dashed-block
                                 .inner-block
                                     +icon('cert-1')
 
-                        a(href='static/img/content/tab-img-1.jpg')
+                        a.photo-item(href='static/img/content/tab-img-1.jpg')
                             img(src='static/img/content/tab-img-1.jpg')
                             .hover-block
                                 .dashed-block
                                 .inner-block
                                     +icon('cert-1')
 
-                        a(href='static/img/content/tab-img-2.jpg')
+                        a.photo-item.photo-item--big(href='static/img/content/tab-img-2.jpg')
                             img(src='static/img/content/tab-img-2.jpg')
                             .hover-block
                                 .dashed-block
                                 .inner-block
                                     +icon('cert-1')
 
-                        a(href='static/img/content/tab-img-2.jpg')
+                        a.photo-item.photo-item--big(href='static/img/content/tab-img-2.jpg')
                             img(src='static/img/content/tab-img-2.jpg')
                             .hover-block
                                 .dashed-block
                                 .inner-block
                                     +icon('cert-1')
 
-                        a(href='static/img/content/tab-img-1.jpg')
+                        a.photo-item(href='static/img/content/tab-img-1.jpg')
                             img(src='static/img/content/tab-img-1.jpg')
                             .hover-block
                                 .dashed-block
                                 .inner-block
                                     +icon('cert-1')
 
-                        a(href='static/img/content/tab-img-1.jpg')
+                        a.photo-item(href='static/img/content/tab-img-1.jpg')
                             img(src='static/img/content/tab-img-1.jpg')
                             .hover-block
                                 .dashed-block
                                 .inner-block
                                     +icon('cert-1')
 
-                        a(href='static/img/content/tab-img-1.jpg')
+                        a.photo-item(href='static/img/content/tab-img-1.jpg')
                             img(src='static/img/content/tab-img-1.jpg')
                             .hover-block
                                 .dashed-block
@@ -157,7 +173,7 @@ block content
                             | Смотреть еще 
                             +fa('eye')
 
-        .photo-session__calc
+        .photo-session__calc#calc
             .container
                 .photo-session__calc__block
                     .photo-session__calc__title Калькулятор стоимости
@@ -167,7 +183,7 @@ block content
                             .photo-session__calc__slide
                                 .photo-session__calc__label Количество интерьеров:
                                 .photo-session__calc__slide-wrap
-                                    input.photo-session__calc__slide-input(type='text' value='1')
+                                    input.photo-session__calc__slide-input(type='text' value='1' disabled)
                                     .photo-session__calc__slide-numbers
                                         span._active 1
                                         span 2
@@ -175,7 +191,7 @@ block content
                                         span 4
                                         span 5
 
-                                    .photo-session__calc__slide-js
+                                    .photo-session__calc__slide-js.one
                                     .photo-session__calc__slide-help
                                         +fa('question-circle')
                                         .photo-session__calc__slide-hint Нажмите на «Выбрать интерьеры» и отметьте галочкой интерьеры в которых вы хотели сниматься, после чего нажмите кнопку выбрать.
@@ -183,7 +199,7 @@ block content
                             .photo-session__calc__slide
                                 .photo-session__calc__label Количество образов:
                                 .photo-session__calc__slide-wrap
-                                    input.photo-session__calc__slide-input(type='text' value='1')
+                                    input.photo-session__calc__slide-input(type='text' value='1' disabled)
                                     .photo-session__calc__slide-numbers
                                         span._active 1
                                         span 2
@@ -191,15 +207,18 @@ block content
                                         span 4
                                         span 5
 
-                                    .photo-session__calc__slide-js
+                                    .photo-session__calc__slide-js.two
                                     .photo-session__calc__slide-help
                                         +fa('question-circle')
                                         .photo-session__calc__slide-hint Нажмите на «Выбрать интерьеры» и отметьте галочкой интерьеры в которых вы хотели сниматься, после чего нажмите кнопку выбрать.
 
-                            .photo-session__calc__tabs.tabs
-                                .photo-session__calc__tabs-toggles.tabs__toggles
-                                    .photo-session__calc__tabs-toggles-item.tab__toggles__item._active(data-toggle='1') Для себя
-                                    .photo-session__calc__tabs-toggles-item.tab__toggles__item(data-toggle='2') В подарок
+                            .photo-session__calc__tabs
+                                .photo-session__calc__tabs-toggles
+                                    input(type='radio' name='for-what' id='radio-1' checked)
+                                    label(for='radio-1') Для себя
+
+                                    input(type='radio' name='for-what' id='radio-2')
+                                    label(for='radio-2') В подарок
 
                                 .photo-session__calc__tabs-wrap.tabs__wrap
                                     .photo-session__calc__tabs-item.tabs__item._active(data-tab='1')
@@ -225,32 +244,6 @@ block content
                                             button.photo-session__calc__tabs-line-btn.more-btn Подробнее
                                         .photo-session__calc__tabs-line
                                             .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Аксессуары
-                                            .photo-session__calc__tabs-line-item Входит в стоимость
-                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
-
-                                    .photo-session__calc__tabs-item.tabs__item(data-tab='1')
-                                        .photo-session__calc__tabs-line
-                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Одежда
-                                            .photo-session__calc__tabs-line-item Входит в стоимость
-                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
-                                        .photo-session__calc__tabs-line
-                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Обувь
-                                            .photo-session__calc__tabs-line-item Входит в стоимость
-                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
-                                        .photo-session__calc__tabs-line
-                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Аксессуары
-                                            .photo-session__calc__tabs-line-item Входит в стоимость
-                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
-                                        .photo-session__calc__tabs-line
-                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Аренда фотостудии
-                                            .photo-session__calc__tabs-line-item Входит в стоимость
-                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
-                                        .photo-session__calc__tabs-line
-                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Макияж
-                                            .photo-session__calc__tabs-line-item Входит в стоимость
-                                            button.photo-session__calc__tabs-line-btn.more-btn Подробнее
-                                        .photo-session__calc__tabs-line
-                                            .photo-session__calc__tabs-line-item.photo-session__calc__tabs-line-item--first Укладка
                                             .photo-session__calc__tabs-line-item Входит в стоимость
                                             button.photo-session__calc__tabs-line-btn.more-btn Подробнее
 
@@ -393,28 +386,36 @@ block content
                         .interiors__numbers
                             .interiors__numbers__item
                                 .border-block
-                                    .inner-block 1
+                                    a(href='static/img/content/tab-img-1.jpg')
+                                        .inner-block 1
                             .interiors__numbers__item
                                 .border-block
-                                    .inner-block 2
+                                    a(href='static/img/content/tab-img-2.jpg')
+                                        .inner-block 2
                             .interiors__numbers__item
                                 .border-block
-                                    .inner-block 3
+                                    a(href='static/img/content/tab-img-1.jpg')
+                                        .inner-block 3
                             .interiors__numbers__item
                                 .border-block
-                                    .inner-block 4
+                                    a(href='static/img/content/tab-img-2.jpg')
+                                        .inner-block 4
                             .interiors__numbers__item
                                 .border-block
-                                    .inner-block 5
+                                    a(href='static/img/content/tab-img-1.jpg')
+                                        .inner-block 5
                             .interiors__numbers__item
                                 .border-block
-                                    .inner-block 6
+                                    a(href='static/img/content/tab-img-2.jpg')
+                                        .inner-block 6
                             .interiors__numbers__item
                                 .border-block
-                                    .inner-block 7
+                                    a(href='static/img/content/tab-img-1.jpg')
+                                        .inner-block 7
                             .interiors__numbers__item
                                 .border-block
-                                    .inner-block 8
+                                    a(href='static/img/content/tab-img-2.jpg')
+                                        .inner-block 8
 
             .example-works
                 .example-works__item
@@ -550,14 +551,24 @@ block content
                         .photo-session__booking__sub-title Успей забронировать время на фотосессию!
                         .photo-session__booking__inputs
                             .photo-session__booking__input-item
-                                input.photo-session__booking__input(type='text')
+                                input.photo-session__booking__input#datepicker(type='text')
                                 .photo-session__booking__ico
                                     +fa('calendar')
 
-                            .photo-session__booking__input-item
-                                input.photo-session__booking__input(type='text')
-                                .photo-session__booking__ico
-                                    +fa('clock-o')
+                            .photo-session__booking__input-item.category-filter
+                                .photo-session__booking__input.category-filter__selected
+                                    span 10:00
+                                    .photo-session__booking__ico
+                                        +fa('clock-o')
+
+                                .category-filter__dropdown
+                                    .category-filter__item 10:00
+                                    .category-filter__item 11:00
+                                    .category-filter__item 12:00
+                                    .category-filter__item 13:00
+                                //input.photo-session__booking__input(type='text')
+                                //.photo-session__booking__ico
+
 
                         .photo-session__booking__text
                             p
@@ -588,10 +599,17 @@ block content
 
             .popup__input-item
                 .popup__label-text Желаемое время:
-                .popup__input-wrap
-                    input.popup__input(type='text')
-                    .popup__icon
-                        +fa('clock-o')
+                .popup__input-wrap.category-filter
+                    .popup__input.category-filter__selected
+                        span 10:00
+                        .popup__icon
+                            +fa('clock-o')
+
+                    .category-filter__dropdown
+                        .category-filter__item 10:00
+                        .category-filter__item 11:00
+                        .category-filter__item 12:00
+                        .category-filter__item 13:00
 
             .popup__input-item
                 .popup__label-text Ваше имя:
