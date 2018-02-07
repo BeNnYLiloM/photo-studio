@@ -138,9 +138,14 @@
                 width: calc(100% - 8px)
             
             &__nav
+                display: table
+                width: 100%
+
                 &__item
                     transition: .15s ease-out
                     border-radius: 5px 5px 0 0
+                    display: table-cell
+                    text-align: center
 
                     &:hover
                         background: #fff
@@ -216,7 +221,7 @@
                         opacity: 1
 
                     img
-                        opacity: .4
+                        //opacity: .4
 
                 .hover-block
                     position: absolute
@@ -231,7 +236,7 @@
                     opacity: 0
                     transition: .15s ease-out
                     
-                    &::before
+                    //&::before
                         content: ''
                         background: #fff
                         position: absolute
@@ -242,7 +247,7 @@
                         margin-left: -56px
                         z-index: 3
 
-                    &::after
+                    //&::after
                         content: ''
                         background: #fff
                         position: absolute
@@ -272,7 +277,7 @@
                         height: 100%
                         width: 100%
                         font-size: 35px
-                        background: url('../img/icons/hover-text.png') no-repeat 41px 27px
+                        //background: url('../img/icons/hover-text.png') no-repeat 41px 27px
                         border-radius: 50%
                         z-index: 5
 
@@ -557,6 +562,7 @@
                     margin-left: 10px
                     margin-top: 4px
                     letter-spacing: .5px
+                    background: #fff
 
         &__text
             margin-bottom: 23px
@@ -612,6 +618,9 @@
 
     &__select-package
         margin-bottom: 72px
+
+        .certificates__table
+            display: none
 
         &__title
             text-align: center
@@ -677,6 +686,7 @@
             &:hover
                 z-index: 8
                 transform: scale(1.1)
+
 
             &::before
                 content: ''
@@ -1255,6 +1265,30 @@
 
 @media screen and (max-width: 998px)
     .photo-session
+        &__banner
+            padding-top: 185px
+
+            &__wrap
+                display: table
+                width: 100%
+
+            &__item
+                display: table-cell
+                padding: 15px 0
+                font-size: 13px
+                text-align: center
+
+                .icon
+                    display: block
+                    margin: 0 auto 10px
+
+            &__links
+                padding-right: 0
+                margin-bottom: 85px
+
+            .order-photo-session-btn
+                width: 340px
+
         &__menu
             .navbar
                 display: none
@@ -1282,6 +1316,9 @@
                 text-align: center
 
         &__select-package
+            &__wrap
+                display: none
+
             &__item
                 &:last-child
                     .photo-session__select-package__item-wrap
@@ -1290,6 +1327,51 @@
                 &-wrap
                     padding-left: 20px
 
+            .certificates
+                &__table
+                    &__head
+                        .certificates__table__td
+                            font-size: 40px
+                        
+                            &:nth-child(1)
+                                color: #1c181b
+                                padding-left: 39px
+
+                            &:nth-child(2)
+                                color: #868cfa
+
+                            &:nth-child(3)
+                                color: #a164f0
+
+                    &__body
+                        .certificates__table
+                            &__tr
+                                &:nth-child(odd)
+                                    border: 2px solid rgba(161,100,240, .2)
+                                    border-radius: 3px
+
+                                &:nth-child(even)
+                                    border: none
+
+                            &__td
+                                &:first-child
+                                    padding-left: 39px
+                                    width: 192px
+
+                    &__td
+                        width: 190px
+                        padding: 15px 18px
+
+                    .price
+                        font-size: 50px
+                        text-align: center
+
+                    .order-btn
+                        width: 193px
+                        height: 56px
+
+                        a
+                            padding-bottom: 0
 
         &__steps
             &__item
@@ -1320,3 +1402,24 @@
 
         &__booking__left
             padding: 0 50px 40px
+
+        &__interiors
+            margin-bottom: 50px
+
+        &__views
+            background: none
+
+            &__wrap
+                flex-direction: column
+                margin-bottom: 0
+
+                &:nth-child(3)
+                    flex-direction: column-reverse
+
+            &__img
+                text-align: center
+
+            &__text-block
+                margin-top: 30px
+
+

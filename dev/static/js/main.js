@@ -10,26 +10,30 @@ $(document).ready(function () {
 
     // Header fixed
     WINDOW.scroll(function () {
-        if (!$('.main-wrapper').hasClass('photo-session')) {
-            if (WINDOW.scrollTop() > 170) {
-                mainWrapper.addClass('_scroll');
-                mainHeader.addClass('_fixed');
-            } else {
-                mainHeader.removeClass('_fixed');
-            }
+        if (WINDOW.width() > 998) {
+            if (!$('.main-wrapper').hasClass('photo-session')) {
+                if (WINDOW.scrollTop() > 170) {
+                    mainWrapper.addClass('_scroll');
+                    mainHeader.addClass('_fixed');
+                } else {
+                    mainHeader.removeClass('_fixed');
+                }
 
-            if (WINDOW.scrollTop() < sTop) {
-                mainWrapper.removeClass('_scroll');
-            }
+                if (WINDOW.scrollTop() < sTop) {
+                    mainWrapper.removeClass('_scroll');
+                }
 
-            sTop = $(this).scrollTop();
+                sTop = $(this).scrollTop();
+            }
         }
     });
 
-    if (!$('.main-wrapper').hasClass('photo-session')) {
-        if (WINDOW.scrollTop() > 0) {
-            mainWrapper.addClass('_scroll');
-            mainHeader.addClass('_fixed');
+    if (WINDOW.width() > 998) {
+        if (!$('.main-wrapper').hasClass('photo-session')) {
+            if (WINDOW.scrollTop() > 0) {
+                mainWrapper.addClass('_scroll');
+                mainHeader.addClass('_fixed');
+            }
         }
     }
 
@@ -277,7 +281,11 @@ $(document).ready(function () {
         $.magnificPopup.close();
     });
 
-    $('#datepicker').datepicker();
+    $('.datepicker').datepicker({
+        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+        dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+        firstDay: 1,
+    });
 
     $('.certificates__module__title-input').keyup(function () {
         var text = $(this).val();
@@ -285,10 +293,24 @@ $(document).ready(function () {
         addText(text, '.certificates__module__title');
     });
 
+    var initH = parseInt($('.certificates__module__text .inner-block').css('height'));
+
     $('.certificates__module__text-input').keyup(function () {
         var text = $(this).val();
 
-        addText(text, '.certificates__module__text');
+        if (parseInt($('.certificates__module__text .inner-block').css('height')) > parseInt($('.certificates__module__text').css('height'))) {
+            var fs = parseInt($('.certificates__module__text').css('font-size'));
+
+            $('.certificates__module__text').css({
+                'font-size': (fs - 1) + 'px'
+            });
+        } else if (initH > $('.certificates__module__text .inner-block').css('height')) {
+            $('.certificates__module__text').css({
+                'font-size': '18px'
+            });
+        }
+
+        addText(text, '.certificates__module__text .inner-block');
     });
 
     function addText (t, b) {

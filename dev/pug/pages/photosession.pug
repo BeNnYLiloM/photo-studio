@@ -374,6 +374,72 @@ block content
                         button.default-btn.photo-session__select-package__item-btn
                             a.popup-with-form(href='#callback-form') Забронировать
 
+
+
+                .certificates__table
+                    .certificates__table__head
+                        .certificates__table__tr
+                            .certificates__table__td mini
+                            .certificates__table__td standart
+                            .certificates__table__td premium
+
+                    .certificates__table__body
+                        .certificates__table__tr
+                            .certificates__table__td Аренда фотостудии
+                            .certificates__table__td Аренда фотостудии
+                            .certificates__table__td Аренда фотостудии
+
+                        .certificates__table__tr
+                            .certificates__table__td 1 образ
+                            .certificates__table__td 2 образа
+                            .certificates__table__td 3 образа
+
+                        .certificates__table__tr
+                            .certificates__table__td 1 интерьер
+                            .certificates__table__td 2 интерьера
+                            .certificates__table__td 3 интерьера
+
+                        .certificates__table__tr
+                            .certificates__table__td Макияж
+                            .certificates__table__td Макияж
+                            .certificates__table__td Макияж
+
+                        .certificates__table__tr
+                            .certificates__table__td Укладка
+                            .certificates__table__td Укладка
+                            .certificates__table__td Укладка
+
+                        .certificates__table__tr
+                            .certificates__table__td Одежда
+                            .certificates__table__td Одежда
+                            .certificates__table__td Одежда
+
+                        .certificates__table__tr
+                            .certificates__table__td Обработка всей фотосессии (от 50 до 100 снимков с 1 интерьера)
+                            .certificates__table__td Обработка всей фотосессии (от 50 до 100 снимков с 1 интерьера)
+                            .certificates__table__td Обработка всей фотосессии (от 50 до 100 снимков с 1 интерьера)
+
+                        .certificates__table__tr
+                            .certificates__table__td Участвует до 5 чел.
+                            .certificates__table__td Участвует до 5 чел.
+                            .certificates__table__td Участвует до 5 чел.
+
+                    .certificates__table__bottom
+                        .certificates__table__tr
+                            .certificates__table__td
+                                .price 6500р
+                                button.default-btn.order-btn
+                                    a.popup-with-form(href='#callback-form') Заказать
+                            .certificates__table__td
+                                .price 8500р
+                                button.default-btn.order-btn
+                                    a.popup-with-form(href='#callback-form') Заказать
+                            .certificates__table__td
+                                .price 10500р
+                                button.default-btn.order-btn
+                                    a.popup-with-form(href='#callback-form') Заказать
+
+
         .photo-session__interiors
             .container
                 .photo-session__interiors__title интерьеры фотостудии
@@ -551,7 +617,7 @@ block content
                         .photo-session__booking__sub-title Успей забронировать время на фотосессию!
                         .photo-session__booking__inputs
                             .photo-session__booking__input-item
-                                input.photo-session__booking__input#datepicker(type='text')
+                                input.photo-session__booking__input.datepicker(type='text')
                                 .photo-session__booking__ico
                                     +fa('calendar')
 
@@ -593,7 +659,7 @@ block content
             .popup__input-item
                 .popup__label-text Желаемая дата:
                 .popup__input-wrap
-                    input.popup__input(type='text')
+                    input.popup__input.datepicker(type='text')
                     .popup__icon
                         +fa('calendar')
 

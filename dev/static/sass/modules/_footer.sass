@@ -6,6 +6,7 @@
     height: 673px
     background: url("../img/backgrounds/footer-bg.jpg") no-repeat center top
     padding-top: 128px
+    overflow: hidden
 
     &__top
         margin-bottom: 57px
@@ -155,7 +156,7 @@
 @media screen and (max-width: 1080px)
     .main-footer
         background: url("../img/backgrounds/footer-bg2.jpg") no-repeat center top
-        height: 890px
+        height: 960px
 
         &__top
             .flex-wrap
@@ -190,4 +191,15 @@
             &__item
                 width: 220px
 
+        &__map
+            width: 100%
+            margin-left: 0
+            left: 0
 
+            &__wrap
+                width: 100%
+
+                &::before
+                    background: url('../img/icons/footer-label2.png') no-repeat
+                    left: -8px
+                    top: -2px
